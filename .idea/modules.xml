@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgoWorks/AlgoWorks.iml" filepath="$PROJECT_DIR$/AlgoWorks/AlgoWorks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Solved-Algo-DataStructures.iml" filepath="$PROJECT_DIR$/.idea/Solved-Algo-DataStructures.iml" />
+    </modules>
+  </component>
+</project>
