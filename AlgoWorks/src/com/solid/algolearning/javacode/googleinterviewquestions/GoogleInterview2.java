@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode;
+package com.solid.algolearning.javacode.googleinterviewquestions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ public class GoogleInterview2 {
 //    Our function will always return true or false and not the pairs
 //    The main goal of this is to know the most efficient function you can come up with
 //    Started with the naive approach
-//    Obviously for the brute force approach, the time complexity is O{n^2) because of the nested loop
+//    Obviously for the brute force approach, the time complexity is O(n^2) because of the nested loop
 //    and is inefficient because it becomes slow as the inputs become larger the more.
 
 //    and then afterwards thought of a better approach
@@ -45,7 +45,7 @@ public class GoogleInterview2 {
 //    Better approach
     public static boolean hasPairWithSum(int[] arr, int sum){
         int len = arr.length;
-        Set<Integer> elementSet= new HashSet<>(len);
+        Set<Integer> elementSet = new HashSet<>(len);
         for (int i : arr) {
             if (elementSet.contains(i)) {
                 return true;
