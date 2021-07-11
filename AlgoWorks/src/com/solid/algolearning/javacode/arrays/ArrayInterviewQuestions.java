@@ -53,7 +53,7 @@ public class ArrayInterviewQuestions {
 //        First thing to do is to always check the inputs:
 //        If args is empty, or args is just one letter, there is no need for any reversal simply printout the letter
 //        We can also add some input validation to the string to make sure it is an instance of/typeof String class.
-//        But in this case its not necessary because the input is always a String
+//        But in this case its not necessary because the input is always a String as stated
         if (args.isEmpty() || args.length() < 2){
             System.out.println("Hmm, that's not good for reversal");
         }else {

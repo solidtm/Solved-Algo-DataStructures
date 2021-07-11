@@ -36,7 +36,6 @@ class MyArray{
         this.length--;
     }
 }
-
 const newArray = new MyArray();
 console.log(newArray.push('hi'));
 newArray.push('you');
