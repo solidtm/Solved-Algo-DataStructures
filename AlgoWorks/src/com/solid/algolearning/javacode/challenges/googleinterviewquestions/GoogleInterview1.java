@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.googleinterviewquestions;
+package com.solid.algolearning.javacode.challenges.googleinterviewquestions;
 
 import java.util.Hashtable;
 

@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.turingchallenges;
+package com.solid.algolearning.javacode.challenges.turingchallenges;
 
 import java.util.Arrays;
 
