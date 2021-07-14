@@ -80,5 +80,11 @@ public class LikedListProblems {
 
         return prev;
     }
-   }
+//      Example of Stack overflow
+//    public static int foo(){
+//            foo();
+//
+//            return 2;
+//    }
+}
 
