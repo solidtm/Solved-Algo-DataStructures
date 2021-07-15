@@ -1,6 +1,6 @@
 package com.solid.algolearning.javacode.linkedlist;
 
-public class LikedListProblems {
+public class LinkedListProblems {
 //    One of the most common interview questions is to reverse a linkedList
 //    Given a LinkedList, how would you go about reversing a linkedList?
 //    eg list = [1, 10, 16, 88]
@@ -56,17 +56,18 @@ public class LikedListProblems {
             public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
         }
 
-    public ListNode reverseListWithIndices(ListNode head, int left, int right) {
+    public ListNode reverseListWithIndices(ListNode start, int left, int right) {
+
 //         check if the LinkedList contains one or 0 nodes
 //        TODO: Implement this to the end
 //        TODO: Method not implemented fully
 //
-        if(head == null || head.next == null){
-            return head;
+        if(start == null || start.next == null){
+            return start;
         }
 
         ListNode prev = null;
-        ListNode current = head;
+        ListNode current = start;
 
         while(left <= right && current != null){
             ListNode temp = current.next;
