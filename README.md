@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-This project contains a collection of algorithm and data structure questions I've been able to solve, in Java and Kotlin.
+This project contains a collection of algorithm and data structure questions I've been able to solve, in Java, Javascript and Kotlin.
 
 I use it for learning purposes. Used https://www.visualgo.net to visualize the common behaviour of some data structures. Feel free to use that too.
 
