@@ -28,14 +28,14 @@ public class HashTableGoogleQuestion {
     }
 
     public static int findRecurringNumber(int[] array){
-        int result = 0;
+        int result = -1;
         if(array.length < 1){
             System.out.println("Null element array");
-            return 0;
+            return -1;
         }
 
         Set<Integer> elementSet = new HashSet<>();
-        for(int element : array){
+        for(int element : array){       //{2, 1, 1, 2, 3, 5, 1, 2, 4};
             if (!elementSet.contains(element)){
                 elementSet.add(element);
                 System.out.println(elementSet.toString());

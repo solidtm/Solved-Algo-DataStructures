@@ -106,7 +106,7 @@ public class ArrayInterviewQuestions {
     }
 
 
-//    To sum problem that returns the index of the two array elements that add up to the sum.
+//    Two sum problem that returns the index of the two array elements that add up to the sum.
     public static int[] twoSum(int[] nums, int target) {
         ArrayList<Integer> numArray = new ArrayList();
         ArrayList<Integer> returnArray = new ArrayList();

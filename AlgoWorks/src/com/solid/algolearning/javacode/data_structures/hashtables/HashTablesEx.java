@@ -30,7 +30,7 @@ public class HashTablesEx {
 //       finish implementation
     }
 
-    public static void gey(String key){
+    public static void get(String key){
         int address = hash(key);
 //       finish implementation
     }
