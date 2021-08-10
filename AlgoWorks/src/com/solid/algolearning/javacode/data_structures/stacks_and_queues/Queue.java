@@ -73,11 +73,9 @@ public class Queue {
 
         System.out.println(myQueue.peek());
         System.out.println(myQueue.enqueue("Joy"));
-        System.out.println(myQueue.dequeue());
         System.out.println(myQueue.enqueue("Matt"));
         System.out.println(myQueue.enqueue("Pavel"));
         System.out.println(myQueue.enqueue("Samir"));
-        System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());

@@ -1,8 +1,8 @@
-package com.solid.algolearning.javacode.data_structures.trees;
+package com.solid.algolearning.javacode.algorithms.hackerRankChallenges;
 
 import java.util.*;
 
-public class BinarySearchTree {
+public class PrintNumbers {
 
 
     public static void printNumbers(int N){
