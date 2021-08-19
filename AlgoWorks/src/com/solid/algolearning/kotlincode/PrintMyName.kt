@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode
+package com.solid.algolearning.kotlincode
 
 /**
  * Zuri Training
