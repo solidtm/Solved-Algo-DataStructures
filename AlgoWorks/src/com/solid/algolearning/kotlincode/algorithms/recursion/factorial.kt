@@ -1,8 +1,8 @@
-package com.solid.algolearning.kotlincode.algorithms
+package com.solid.algolearning.kotlincode.algorithms.recursion
 
 fun main() {
-        println(findFactorialIterative(5))
-        println(findFactorialRecursive(5))
+//        println(findFactorialIterative(5))
+        println(findFactorialRecursive(8))
 }
 
 fun findFactorialIterative(_number: Int) : Int{
@@ -24,9 +24,11 @@ fun findFactorialIterative(_number: Int) : Int{
 fun findFactorialRecursive(_number: Int): Int{
     var number = _number
 
+//    base case
     if (number == 0 || number == 1){
         return 1
     }
 
+//    recursive case
     return number * findFactorialRecursive(number - 1)
 }

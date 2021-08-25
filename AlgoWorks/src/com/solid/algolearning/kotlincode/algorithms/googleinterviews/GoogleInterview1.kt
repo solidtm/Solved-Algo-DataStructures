@@ -1,4 +1,4 @@
-package com.solid.algolearning.kotlincode
+package com.solid.algolearning.kotlincode.algorithms.googleinterviews
 
 import java.util.*
 
