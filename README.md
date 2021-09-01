@@ -1,4 +1,4 @@
-<h1 align="center">Algorithms and Data Structures</h1></br>
+<h1 align="center">Data Structures and Algorithms</h1></br>
 
 This project contains a collection of algorithm and data structure questions I've been able to solve, in Java, Javascript and Kotlin.
 
