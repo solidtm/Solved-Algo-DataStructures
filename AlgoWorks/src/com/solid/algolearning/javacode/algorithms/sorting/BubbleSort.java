@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.sorting;
+package com.solid.algolearning.javacode.algorithms.sorting;
 
 import java.util.Arrays;
 

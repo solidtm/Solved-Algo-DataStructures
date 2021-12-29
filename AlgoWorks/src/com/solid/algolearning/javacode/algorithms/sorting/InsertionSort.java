@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.sorting;
+package com.solid.algolearning.javacode.algorithms.sorting;
 
 import java.util.Arrays;
 
@@ -14,6 +14,9 @@ public class InsertionSort {
 
 
     }
+
+//    Insertion sort assumes that the first element in teh list is in it's correct sorted position and starts from the second to sort,
+//    Comparing from then on
 
     private static void insertSort(int[] numbers, int length) {
         for (int firstUnsortedIndex = 1; firstUnsortedIndex < length; firstUnsortedIndex++){
