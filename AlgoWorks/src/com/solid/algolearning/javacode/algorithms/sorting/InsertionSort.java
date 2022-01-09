@@ -15,8 +15,8 @@ public class InsertionSort {
 
     }
 
-//    Insertion sort assumes that the first element in teh list is in it's correct sorted position and starts from the second to sort,
-//    Comparing from then on
+//    Insertion sort assumes that the first element in the list is in its correct sorted position and starts from the second to sort,
+//    Comparing from then on and inserting in the appropriate position/index
 
     private static void insertSort(int[] numbers, int length) {
         for (int firstUnsortedIndex = 1; firstUnsortedIndex < length; firstUnsortedIndex++){
