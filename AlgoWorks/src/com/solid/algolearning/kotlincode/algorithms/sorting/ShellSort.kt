@@ -7,7 +7,7 @@ import java.util.*
 * ShellSort starts out by using a larger gap value (in this case calculated using array.size / 2) or Knuth sequence
 * formula of (3^k -1) / 2.
 *
-*  */
+*  */ 
 fun main() {
     val array = intArrayOf(20, 35, -15, 7, 55, 1, -22)
     println(shellSort(array).contentToString())
