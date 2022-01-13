@@ -5,9 +5,10 @@ public class BinarySearchAlgo {
     public static void main(String[] args) {
         StopWatch stopWatch = new StopWatch();
         int[] array = {6, 13, 14, 25, 33, 43, 51, 64, 72, 84, 93, 95, 96, 97, 99};
-        int key = 72;
-        System.out.println(binarySearch(array, key));
-        System.out.println(stopWatch.elapsedTime());
+        int[] arr = {51, 33, 33, 13, 12, 9, 4, 3, 1, 0};
+        int key = 33;
+        System.out.println(binarySearch(arr, key));
+//        System.out.println(stopWatch.elapsedTime());
 
     }
 
@@ -23,7 +24,7 @@ public class BinarySearchAlgo {
         int low = 0, high = a.length -1;
 
         while (low <= high){
-            int middle = low + (high - low) / 2;        //note this very well, middle is low + (high - low) / 2
+            int middle = low + (high - low) / 2;        //note this very well, middle is low + (high - low) / 2     (4, 6, 10), key = 10 --> 0 + (2 - 0) / 2 = 1
             if (key  < a[middle]){
                 high = middle - 1;
             }else if (key > a[middle]){
