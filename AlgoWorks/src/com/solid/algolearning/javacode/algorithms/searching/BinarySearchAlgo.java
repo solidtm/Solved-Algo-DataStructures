@@ -12,10 +12,10 @@ public class BinarySearchAlgo {
     }
 
 
-    /*Non recursive solution for Binary search algorithm
+    /*Non-recursive solution for Binary search algorithm
     Here we find index of a key in a sorted array
     Implementation of the binarySearch Algo is such that we first look for the key starting from the middle of the sorted array
-    If the key is less than the middle value, then the key is at the right side of the list, else if it is greater than the mid
+    If the key is less than the middle value, then the key is at the right-side of the list, else if it is greater than the mid
     value, then it is at the right hnd half of the list, else it is equal to the list and we repeat this until the value is found
     from the subsets created afterwards.
     */
