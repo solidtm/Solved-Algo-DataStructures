@@ -9,16 +9,13 @@ import java.util.*
 //    We don't swap elements in this implementation, we shift elements
 
 fun main() {
-    println("How many products do you want to buy?: ")
-    val num = readLine()
-    val number = num?.toDouble()?.times(29.99)?:1
-    println("Total cost of purchase is: $number" )
+//    println("How many products do you want to buy?: ")
+//    val num = readLine()
+//    val number = num?.toDouble()?.times(29.99)?:1
+//    println("Total cost of purchase is: $number" )
 
-
-
-
-//    val numbers = intArrayOf(20, 35, -15, 7, 55, 1, -22)   //firstUnsortedIndex = 2, newElement = -15, i = 1,
-//    insertSort(numbers, numbers.size)
+    val numbers = intArrayOf(20, 35, -15, 7, 55, 1, -22)   //firstUnsortedIndex = 2, newElement = -15, i = 1,
+    insertSort(numbers, numbers.size)
 }
 
 //    Insertion sort assumes that the first element in the list is in its correct sorted position and starts from the second to sort,
@@ -28,7 +25,7 @@ fun main() {
 //    Comparing from then on and inserting in the appropriate position/index
 private fun insertSort(numbers: IntArray, length: Int) {
     for (firstUnsortedIndex in 1 until length) {
-        val newElement = numbers[firstUnsortedIndex]
+        val newElement = numbers[firstUnsortedIndex]      //(20, 35, -15, 7, 55, 1, -22)
         //        This is where the shifting is done
 //        loop through the sorted partition with condition that we have not hit the end of the array, and that the number at i-1 is greater than the newElement
         var i = firstUnsortedIndex
