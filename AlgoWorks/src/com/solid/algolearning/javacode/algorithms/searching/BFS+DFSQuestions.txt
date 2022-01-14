@@ -1,0 +1,23 @@
+Which searching algorithm will you use to solve the following search/traversal problems?  BFS or DFS?
+
+1. If you know a solution is not far from the root of the tree:
+    Answer ==> Breadth first search
+
+2. If the tree is very deep and solutions are rare:
+    Answer ==> Breadth first search because Depth first search will take a really long time with such a tree and because solutions
+    are rare it is probably going to repeat that over and over and over.
+    And with DFS we use recursive functions which will take a really long time than BFS
+    But with BFS, its best if we are not concerned with memory usage
+
+3. If the tree is very wide:
+    Answer ==> Depth first search because Breadth first search will use too much memory as it keeps track of all the nodes in the level in a queue
+    and because of that it might take up a lot of memory. So Depth first search is best here.
+
+4. If solutions are very frequent but located deep in the tree:
+    Answer ==> Depth first search to find the answer quicker down the tree (or graph).
+
+5. Determining whether a path exists between two nodes:
+    Answer ==> Depth first search is built for this question
+
+6. Finding the shortest path:
+    Answer ==> Breadth first search is built for this question.
