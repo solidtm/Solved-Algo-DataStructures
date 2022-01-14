@@ -8,6 +8,7 @@ public class SquareSort {
         int[] input = {-5, -3, 0, 2, 4, 6};// Expected output --> [0, 4, 9, 16, 25, 36]
         int[] input2 = {-2, -1, 0, 2, 3}; // Expected output --> [0, 1, 4, 4, 9]
         System.out.println(Arrays.toString(squareSort(input)));
+        System.out.println(Arrays.toString(squareSort(input2)));
     }
 
 //    This approach is in place and uses 2 pointer approach to still meet the target output

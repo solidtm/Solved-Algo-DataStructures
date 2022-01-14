@@ -22,6 +22,9 @@ public class MergeSort {
         List<Integer> left = input.subList(0, mid);
         List<Integer> right = input.subList(mid, input.size());
 
+        System.out.println("left: " + left);
+        System.out.println("right: " + right);
+
         return merge(mergeSort(left), mergeSort(right));
     }
 
