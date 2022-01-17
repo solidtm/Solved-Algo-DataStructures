@@ -1,7 +1,7 @@
-package com.solid.algolearning.javacode.algorithms;
+package com.solid.algolearning.javacode.algorithms.searching;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import com.solid.algolearning.javacode.algorithms.searching.TreeNode;
 import java.util.List;
 
 public class TreeNodeTrav {
@@ -34,16 +34,6 @@ public class TreeNodeTrav {
         result.get(height).add(root.val); // add a value in the  level
         compute(result, root.left, height+1);
         compute(result, root.right, height+1);
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
 //        if(root == null){
