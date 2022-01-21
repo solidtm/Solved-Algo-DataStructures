@@ -1,14 +1,9 @@
 package com.solid.algolearning.javacode.algorithms.searching;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BreadthFirstSearch {
     public static void main(String[] args) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        List<Integer> list = new ArrayList<>();
         TreeNode tree = new TreeNode(1);
         tree.left = new TreeNode(2);
         tree.right = new TreeNode(3);
