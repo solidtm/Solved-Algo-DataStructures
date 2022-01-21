@@ -19,8 +19,8 @@ public class DepthFirstSearch {
         //      1
         //   2     3
         // 4   5 6   7
-//        System.out.println(DFSInInOrder(tree, list));
-//        System.out.println(DFSPreOrder(tree, list));
+        System.out.println(DFSInInOrder(tree, list));
+        System.out.println(DFSPreOrder(tree, list));
         System.out.println(DFSInPostOrder(tree, list)); //[4, 5, 2, 6, 7, 3, 1]
     }
 

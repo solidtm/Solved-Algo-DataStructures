@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import com.solid.algolearning.javacode.algorithms.searching.TreeNode;
 import java.util.List;
 
-public class TreeNodeTrav {
+public class BTLevelOrderTraversal {
 
     public static void main(String[] args) {
         TreeNode tree = new TreeNode(1);

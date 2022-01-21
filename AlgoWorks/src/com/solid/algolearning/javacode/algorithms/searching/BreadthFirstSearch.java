@@ -51,6 +51,10 @@ public class BreadthFirstSearch {
             return list;
         }
 
+        if (root == null){
+            return null;
+        }
+
         TreeNode currentNode = root;
         list.add(currentNode.val);
 
