@@ -38,7 +38,7 @@ public class HashTableGoogleQuestion {
         for(int element : array){       //{2, 1, 1, 2, 3, 5, 1, 2, 4};
             if (!elementSet.contains(element)){
                 elementSet.add(element);
-                System.out.println(elementSet.toString());
+                System.out.println(elementSet);
             }else{
                 result = element;
                 break;

@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.cmd;
+package com.solid.algolearning.javacode.algorithms.codility;
 
 public class LongestBinaryGapProblem {
 

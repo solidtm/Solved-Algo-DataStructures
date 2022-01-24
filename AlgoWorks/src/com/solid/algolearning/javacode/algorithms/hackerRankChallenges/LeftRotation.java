@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class LeftRotation {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(rotateLeft(new int[]{3, 8, 9, 7, 6}, 3)));
         System.out.println(Arrays.toString(rotateLeft(array, 4)));
     }
 
@@ -24,7 +25,7 @@ public class LeftRotation {
 //        If all other requirements above are met:
 //        Loop through from the index of numOfRotations in the array to the end of the array
 //        and copy it into the result array
-        while (mainCounter < array.length){
+        while (mainCounter < array.length){    //
             result[rotatedIndex] = array[mainCounter];
             rotatedIndex++;
             mainCounter++;
