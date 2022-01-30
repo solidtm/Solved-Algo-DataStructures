@@ -27,5 +27,6 @@ public class ValidParenthesisProblem {
         System.out.println(validateParenthesis(new char[]{'(', ')'}));
         System.out.println(validateParenthesis(new char[]{'(', ')', '[',']','{','}'}));
         System.out.println(validateParenthesis(new char[]{'{', '{', '(', '{', ')', '}', '}'}));
+        System.out.println(validateParenthesis(new char[]{'(', ']'}));
     }
 }
