@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlgoWorks/AlgoWorks.iml" filepath="$PROJECT_DIR$/AlgoWorks/AlgoWorks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Solved-Algo-DataStructures.iml" filepath="$PROJECT_DIR$/.idea/Solved-Algo-DataStructures.iml" />
     </modules>
   </component>
 </project>
