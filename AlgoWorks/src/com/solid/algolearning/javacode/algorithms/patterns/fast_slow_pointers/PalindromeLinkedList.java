@@ -43,7 +43,7 @@ public class PalindromeLinkedList {
         ListNode copyOfSecondHead = secondHead;
 
         while(head != null && secondHead != null){
-            if(head != secondHead){
+            if(head.value != secondHead.value){
                 break; //it is not a palindrome
             }
 
@@ -52,14 +52,14 @@ public class PalindromeLinkedList {
         }
         //after finding out if it's a palindrome, we need to reverse back the list again
         reverse(copyOfSecondHead);
-        if (head == null && secondHead == null) return true;   //if both values match
+        if (head == null || secondHead == null) return true;   //if both values match
         return false;
     }
 
     static ListNode reverse(ListNode head){
         ListNode prev = null;
 
-        while (head != null && head.next != null){
+        while (head != null){
             ListNode next = head.next;
             head.next = prev;
             prev = head;
@@ -67,5 +67,16 @@ public class PalindromeLinkedList {
         }
 
         return prev;
+    }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(2);
+        head.next = new ListNode(4);
+        head.next.next = new ListNode(6);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(2);
+        System.out.println("Is palindrome: " + isPalindrome(head));
+        head.next.next.next.next.next = new ListNode(2);
+        System.out.println("Is palindrome: " + isPalindrome(head));
     }
 }
