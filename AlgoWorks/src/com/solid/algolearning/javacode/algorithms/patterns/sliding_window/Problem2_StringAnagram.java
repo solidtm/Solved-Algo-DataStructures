@@ -32,7 +32,7 @@ public class Problem2_StringAnagram {
         for (char chr : pattern.toCharArray())
             charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
 
-        List<Integer> resultIndices = new ArrayList<Integer>();
+        List<Integer> resultIndices = new ArrayList<>();
         // our goal is to match all the characters from the map with the current window
         for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
             char rightChar = str.charAt(windowEnd);

@@ -29,7 +29,7 @@ public class LongestSubStringWithSameLetters {
             frequencyMap.put(rightChar, frequencyMap.getOrDefault(rightChar, 0) + 1);
             maxRepeatingCharacter = Math.max(maxRepeatingCharacter, frequencyMap.get(rightChar));
 
-// current window size is from windowStart to windowEnd, overall we have a letter which is
+            // current window size is from windowStart to windowEnd, overall we have a letter which is
             // repeating 'maxRepeatLetterCount' times, this means we can have a window which has one letter
             // repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.
             // if the remaining letters are more than 'k', it is the time to shrink the window as we
