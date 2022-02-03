@@ -3,7 +3,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.fast_slow_pointers;
 public class FindCycleStart {
 
     static class ListNode {
-        int value = 0;
+        int value;
         ListNode next;
 
         ListNode(int value) {
