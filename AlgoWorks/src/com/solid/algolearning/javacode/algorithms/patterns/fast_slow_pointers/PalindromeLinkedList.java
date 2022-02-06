@@ -60,8 +60,7 @@ public class PalindromeLinkedList {
         }
         //after finding out if it's a palindrome, we need to reverse back the list again
         reverse(copyOfSecondHead);
-        if (head == null || secondHead == null) return true;   //if both values match
-        return false;
+        return head == null || secondHead == null;   //if both values match
     }
 
     static ListNode reverse(ListNode head){

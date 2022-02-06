@@ -74,7 +74,7 @@ public class LetterCombinations {
         }
 
         //body
-        int num=digits.charAt(index) - 48;
+        int num = digits.charAt(index) - '0';
         String s = map[num];
 
         for(int i=0; i<s.length(); i++)
