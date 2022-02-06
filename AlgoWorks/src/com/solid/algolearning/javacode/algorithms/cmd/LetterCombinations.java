@@ -65,9 +65,9 @@ public class LetterCombinations {
     static void helper(List<String> result, String[] map, int index, StringBuilder sb, String digits)
     {
         //base condt.
-        if(digits.length() == 0) return;
+        if(digits.length() == 0) return;   // this means that we have no digits to process
 
-        if(index == digits.length())
+        if(index == digits.length())     // we have gotten values to add to result list
         {
             result.add(sb.toString());
             return;
