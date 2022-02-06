@@ -56,20 +56,20 @@ public class LetterCombinations {
 //
 //        return result;
 
-        List<String> l = new ArrayList<>();
+        List<String> result = new ArrayList<>();
         String map[] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        helper(l, map, 0, new StringBuffer(), digits);
-        return l;
+        helper(result, map, 0, new StringBuilder(), digits);
+        return result;
     }
 
-    static void helper(List<String> l, String[] map, int index, StringBuffer sb, String digits)
+    static void helper(List<String> result, String[] map, int index, StringBuilder sb, String digits)
     {
         //base condt.
-        if(digits.length()==0)
-            return;
-        if(index==digits.length())
+        if(digits.length() == 0) return;
+
+        if(index == digits.length())
         {
-            l.add(sb.toString());
+            result.add(sb.toString());
             return;
         }
 
@@ -80,7 +80,7 @@ public class LetterCombinations {
         for(int i=0; i<s.length(); i++)
         {
             sb.append(s.charAt(i));
-            helper(l,map,index+1,sb,digits);
+            helper(result,map,index+1,sb,digits);   // recursively call the helper function to aend and remove values appropriately
             sb.deleteCharAt(sb.length()-1);
         }
     }
