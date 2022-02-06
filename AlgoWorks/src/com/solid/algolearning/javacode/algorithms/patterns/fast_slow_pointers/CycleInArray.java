@@ -72,6 +72,7 @@ public class CycleInArray {
             return -1; // change in direction, return -1
 
         int nextIndex = (currentIndex + arr[currentIndex]) % arr.length;
+
         if (nextIndex < 0)
             nextIndex += arr.length; // wrap around for negative numbers
 
