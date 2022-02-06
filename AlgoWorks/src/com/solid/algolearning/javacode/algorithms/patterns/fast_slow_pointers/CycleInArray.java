@@ -27,6 +27,21 @@ package com.solid.algolearning.javacode.algorithms.patterns.fast_slow_pointers;
 //        Output: false
 //        Explanation: The array does not have any cycle.
 
+
+
+//Solution:
+// conditions are:
+// 1. values represent jumps it makes
+// 2. Only 2 possible directions, forward/backward
+// 3. cycle sgould be in only one direction
+// 4. origin can be any point in the array
+// 5. cycle should contain more than one element
+
+
+// stopping condition to find cycle is:
+// we can use fast-slow pointer approach to achieve this with conditions ->
+// fast will be used to make the directional changes.
+// if fast == slow, we have found loop
 public class CycleInArray {
 
     public static boolean loopExists(int[] arr) {
@@ -37,9 +52,11 @@ public class CycleInArray {
             // if slow or fast becomes '-1' this means we can't find cycle for this number
             do {
                 slow = findNextIndex(arr, isForward, slow); // move one step for slow pointer
+
                 fast = findNextIndex(arr, isForward, fast); // move one step for fast pointer
                 if (fast != -1)
-                    fast = findNextIndex(arr, isForward, fast); // move another step for fast pointer
+                    fast = findNextIndex(arr, isForward, fast);// move another step for fast pointer
+
             } while (slow != -1 && fast != -1 && slow != fast);
 
             if (slow != -1 && slow == fast)
