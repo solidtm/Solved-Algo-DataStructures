@@ -1,7 +1,9 @@
 package com.solid.algolearning.javacode.algorithms.patterns.in_place_linked_list_reversal;
-//Problem: Reverse the first ‘k’ elements of a given LinkedList.
+//        Problem: Reverse the first ‘k’ elements of a given LinkedList.
 //
-//        Solution: This problem can be easily converted to our parent problem; to reverse the first ‘k’ nodes of the list, we need to pass p=1 and q=k.
+//        Solution: This problem can be easily converted to our parent problem;
+//        to reverse the first ‘k’ nodes of the list,
+//        we need to pass p=1 and q=k.
 
 public class ReverseFirstKElements {
    static ListNode reverseFirstKElem(ListNode head, int k){
