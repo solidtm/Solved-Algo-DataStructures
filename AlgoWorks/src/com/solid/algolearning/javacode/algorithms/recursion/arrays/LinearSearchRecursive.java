@@ -18,6 +18,8 @@ public class LinearSearchRecursive {
         System.out.println(list);
         linearSearchRecursiveAllIndices2(arr2, 2, 0, new ArrayList<>());
         System.out.println(list);
+
+        System.out.println(linearSearchRecursiveAllIndices3(arr, 2, 0));
     }
 
     static int linearSearchRecursive(int[] arr, int target, int index){
@@ -36,6 +38,7 @@ public class LinearSearchRecursive {
     }
 
 
+    //returning all indices list outside the function
     static ArrayList<Integer> list = new ArrayList<>();
     static void linearSearchRecursiveAllIndices(int[] arr, int target, int index){
         if(index > arr.length - 1) return;   //base case
@@ -44,11 +47,26 @@ public class LinearSearchRecursive {
         linearSearchRecursiveAllIndices(arr, target, index + 1);
     }
 
+    //returning all indices list within the parameter of the function
     static ArrayList<Integer> linearSearchRecursiveAllIndices2(int[] arr, int target, int index, ArrayList<Integer> list){
         if(index > arr.length - 1) return list;   //base case
 
         if(arr[index] == target) list.add(index);
 
         return linearSearchRecursiveAllIndices2(arr, target, index + 1, list);
+    }
+
+    //returning all indices list within the body of the function
+    static ArrayList<Integer> linearSearchRecursiveAllIndices3(int[] arr, int target, int index){
+        ArrayList<Integer> list = new ArrayList<>(); //this list is created in below function calls
+
+        if(index == arr.length) return list;   //base case
+
+        if(arr[index] == target) list.add(index); //found target index
+
+        ArrayList<Integer> ansFromBelowCalls =  linearSearchRecursiveAllIndices3(arr, target, index + 1); //all answer from below calls
+        list.addAll(ansFromBelowCalls); //add them to the parent array list
+
+        return list;
     }
 }
