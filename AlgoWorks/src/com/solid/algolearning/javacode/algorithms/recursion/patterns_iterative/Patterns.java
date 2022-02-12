@@ -13,8 +13,10 @@ public class Patterns {
         pattern5(5);
         System.out.println();
         pattern5ShortVersion(5);
-        System.out.println("==============");
+        System.out.println();
         pattern6(5);
+        System.out.println();
+        pattern12(5);
         System.out.println();
         pattern28(5);
         System.out.println();
@@ -120,6 +122,24 @@ public class Patterns {
         }
     }
 
+    static void pattern12(int n){
+        int _n = 2 * n;
+        for (int row = 0; row <= _n; row++) {
+            int c = row < n ? n - row : row - n;
+            int spaces = row < n ? row : _n - row;
+
+            //2nd half
+            for (int space = spaces; space > 0; space--) {
+                System.out.print(" ");
+            }
+
+            for (int col = 1; col <= c; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     static void pattern28(int n) {
         for (int row = 1; row < 2 * n; row++) {
             //for every row, run the column
@@ -133,6 +153,27 @@ public class Patterns {
 
             for (int col = 1; col <= totalCols; col++) {
                 System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    static void pattern17(int n){ //this pattern is the same with pattern 17.
+
+        for(int row = 1; row <= 2 * n; row++){
+            int c = row > n ? (2 * n - (row + 1)) : row;   //for the columns since it is changing at a point.
+            //we calculate the number of spaces required: in this case, noOfSpaces = n - row
+            for (int spaces = 0; spaces < n - c; spaces++) {
+                System.out.print("  ");
+            }
+
+            for (int col = c; col >= 1 ; col--) { //
+                System.out.print(col + " ");
+            }
+
+            for (int col = 2; col <= c ; col++) { //
+                System.out.print(col + " ");
             }
             System.out.println();
         }
@@ -158,25 +199,7 @@ public class Patterns {
         }
     }
 
-    static void pattern17(int n){ //this pattern is the same with pattern 17.
 
-        for(int row = 1; row <= 2 * n; row++){
-            int c = row > n ? (2 * n - (row + 1)) : row;   //for the columns since it is changing at a point.
-            //we calculate the number of spaces required: in this case, noOfSpaces = n - row
-            for (int spaces = 0; spaces < n - c; spaces++) {
-                System.out.print("  ");
-            }
-
-            for (int col = c; col >= 1 ; col--) { //
-                System.out.print(col + " ");
-            }
-
-            for (int col = 2; col <= c ; col++) { //
-                System.out.print(col + " ");
-            }
-            System.out.println();
-        }
-    }
 
 //    here the total number of rows is (2 * n) - 1, and the total number of columns is also (2 * n) - 1
 //    what we need to figure out is: at each level what do we need to print
