@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.recursion.patterns_iterative;
+package com.solid.algolearning.javacode.algorithms.recursion.patterns.patterns_iterative;
 
 public class Patterns {
     public static void main(String[] args) {
