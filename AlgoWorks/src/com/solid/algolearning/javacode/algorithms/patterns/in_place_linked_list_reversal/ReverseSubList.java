@@ -3,15 +3,6 @@ package com.solid.algolearning.javacode.algorithms.patterns.in_place_linked_list
 //Problem Statement#
 //        Given the head of a LinkedList and two positions ‘p’ and ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
 
-class ListNode {
-    int value = 0;
-    ListNode next;
-
-    ListNode(int value) {
-        this.value = value;
-    }
-}
-
 public class ReverseSubList{
     public static ListNode reverse(ListNode head, int p, int q) {
         // check if head and head.next is null and return null;
