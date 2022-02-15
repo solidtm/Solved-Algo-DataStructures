@@ -7,8 +7,9 @@ public class SelectionSort {
 //    Selection sort implementation
     public static void main(String[] args) {
         int[] numbers = {64, 25, 12, 22, 11};
-
         selectSort(numbers, numbers.length);
+        selectionSortRecursive(numbers, numbers.length - 1, 0, 0);
+        System.out.println(Arrays.toString(numbers));
 
     }
 
@@ -25,6 +26,21 @@ public class SelectionSort {
         }
 
         printOut(numbers);
+    }
+
+    static void selectionSortRecursive(int[] arr, int start, int end, int max){
+        if(start == 0) return;
+
+        if (end < start){
+            if(arr[end] > arr[max]){
+                selectionSortRecursive(arr, start, end + 1, end); // change the max value index to that of end
+            }else{
+                selectionSortRecursive(arr, start, end + 1, max); //else, let max be as it is
+            }
+        }else {
+            swap(arr, start - 1, max);
+            selectionSortRecursive(arr, start - 1, 0, 0);
+        }
     }
 
     public static void swap(int[] array, int i, int j){
