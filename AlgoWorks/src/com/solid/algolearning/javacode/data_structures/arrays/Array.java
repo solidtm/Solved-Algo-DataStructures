@@ -33,15 +33,22 @@ public class Array {
     }
 
     public static void main(String[] args) {
-        Array myArray = new Array();
-        System.out.println(myArray.toString());
-//        System.out.println(myArray.get(0));
-
-        myArray.push("hi");
-        myArray.push("you");
-        myArray.push("are");
-        myArray.push("cute");
+//        Array myArray = new Array();
+//        System.out.println(myArray.toString());
+////        System.out.println(myArray.get(0));
+//
+//        myArray.push("hi");
+//        myArray.push("you");
+//        myArray.push("are");
+//        myArray.push("cute");
 //        System.out.println(myArray.push("hi2"));
 
+
+        System.out.println(Math.log10(100));
+        System.out.println(Math.log(10));
+        int x = (int) ( Math.log(21) / Math.log(3));
+        System.out.println(x);
+//        System.out.println(Math.log10(27) / Math.log10(3));
+//        System.out.println(Math.log(3));
     }
 }

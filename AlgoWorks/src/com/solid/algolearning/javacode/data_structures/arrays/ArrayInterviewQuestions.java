@@ -132,7 +132,7 @@ public class ArrayInterviewQuestions {
     }
 
 
-//    moveZeroes problem to move all zeros in an array to the end of the array while still maintaining the order of the non zero elements in the array
+//    moveZeroes problem to move all zeros in an array to the end of the array while still maintaining the order of the non-zero elements in the array
 //    Sub-optimal approach
     public void moveZeroes(int[] nums) {
         int lastIndexOfNonZero = 0;
