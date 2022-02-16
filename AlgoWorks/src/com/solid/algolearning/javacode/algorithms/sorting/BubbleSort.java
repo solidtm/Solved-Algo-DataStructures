@@ -1,7 +1,5 @@
 package com.solid.algolearning.javacode.algorithms.sorting;
 
-import com.sun.org.apache.xpath.internal.objects.XNumber;
-
 import java.util.Arrays;
 
 public class BubbleSort {
