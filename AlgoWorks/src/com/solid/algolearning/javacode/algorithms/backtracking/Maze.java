@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.recursion.permutations;
+package com.solid.algolearning.javacode.algorithms.backtracking;
 
 import java.util.ArrayList;
 

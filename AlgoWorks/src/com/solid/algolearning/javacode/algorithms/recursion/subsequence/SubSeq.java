@@ -1,7 +1,6 @@
 package com.solid.algolearning.javacode.algorithms.recursion.subsequence;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //given a string print all subsequence containing the combination of the letters of the string
 public class SubSeq {
