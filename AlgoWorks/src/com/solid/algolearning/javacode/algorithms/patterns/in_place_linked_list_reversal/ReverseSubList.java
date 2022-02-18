@@ -51,7 +51,7 @@ public class ReverseSubList{
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        ListNode result = ReverseSubList.reverse(head, 1, 3);
+        ListNode result = ReverseSubList.reverse(head, 2, 4);
         System.out.print("Nodes of the reversed LinkedList are: ");
         while (result != null) {
             System.out.print(result.value + " ");
