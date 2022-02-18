@@ -8,12 +8,13 @@ public class NQueensProblem {
         int n = 5;
         boolean[][] board = new boolean[n][n];
 
-        System.out.println(queens(board, 0));
+        System.out.println(placeQueens(board, 0));
     }
 
-    static  int queens( boolean[][] board, int row ){ //return the number of ways we can place queens, true means the queen is placed, we are starting col from 0 all the time no neeed to pass it in paaram
+    static  int placeQueens(boolean[][] board, int row ){ //return the number of ways we can place queens, true means the queen is placed, we are starting col from 0 all the time no neeed to pass it in paaram
       if(row == board.length){  //base case, if we hit the max row
           display(board);
+          System.out.println();
           return 1;
       }
 
@@ -23,7 +24,7 @@ public class NQueensProblem {
           // place the queen if it is safe
             if(isSafe(board, row, col)){
                 board[row][col] = true;    //this row has a queen placed in it.
-                count = count + queens(board, row + 1);   //try to see if a queen can be placed in the below rows or not.
+                count = count + placeQueens(board, row + 1);   //try to see if a queen can be placed in the below rows or not.
                 board[row][col] = false;        // when we come out of the recursive function call, change the places visited or placed to not placed (backtrack)
             }
         }
@@ -72,7 +73,6 @@ public class NQueensProblem {
             }
             System.out.println();
         }
-        System.out.println();
     }
 }
 
