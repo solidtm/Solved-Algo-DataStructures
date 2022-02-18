@@ -24,8 +24,8 @@ public class ValidAnagrams {
          Arrays.sort(tChar);
 
          //returning them back to string
-         s = new String(Arrays.toString(sChar));
-         t = new String(Arrays.toString(tChar));
+         s = Arrays.toString(sChar);
+         t = Arrays.toString(tChar);
 
          //returning true of falase if both strings are equal.
         return s.equals(t);
@@ -46,8 +46,8 @@ public class ValidAnagrams {
         Arrays.sort(tChar);
 
         //returning them back to string
-        s = new String(Arrays.toString(sChar));
-        t = new String(Arrays.toString(tChar));
+        s = Arrays.toString(sChar);
+        t = Arrays.toString(tChar);
 
         //returning true of falase if both strings are equal.
         return s.equals(t);
