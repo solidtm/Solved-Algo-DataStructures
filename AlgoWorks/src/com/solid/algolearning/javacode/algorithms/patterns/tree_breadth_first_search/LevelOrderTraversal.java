@@ -35,9 +35,6 @@ public class LevelOrderTraversal {
         System.out.println("Level order traversal: " + result);
     }
 
-
-
-
 //    Solution 1: Using Queue and iteration
 public static List<List<Integer>> traverseIterative(TreeNode root) {
     List<List<Integer>> result = new ArrayList<List<Integer>>();
