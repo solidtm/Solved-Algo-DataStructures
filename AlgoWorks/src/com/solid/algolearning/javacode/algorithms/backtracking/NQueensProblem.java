@@ -1,14 +1,19 @@
 package com.solid.algolearning.javacode.algorithms.backtracking;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //Problem Statement:
 // Given an NxN board, place N chess queens and display the placement of the N queens on the board,
-// and also return the number of possible ways to place N quees on the board.
+// and also return the number of possible ways to place N queens on the board.
 public class NQueensProblem {
 
     public static void main(String[] args) {
-        int n = 5;
-        boolean[][] board = new boolean[n][n];
+//        int n = 4;
+//        boolean[][] board = new boolean[n][n];
+//        System.out.println(placeQueens(board, 0));
 
-        System.out.println(placeQueens(board, 0));
+        System.out.println(solveNQueens(5));
     }
 
     static  int placeQueens(boolean[][] board, int row ){ //return the number of ways we can place queens, true means the queen is placed, we are starting col from 0 all the time no neeed to pass it in paaram
@@ -52,8 +57,8 @@ public class NQueensProblem {
             }
         }
 
-        //for left diagonal check
-        int maxRight = Math.min(row, board.length - col - 1); // this is the maximum times we have to go back to check if queen is safe to place there left diagonally
+        //for right diagonal check
+        int maxRight = Math.min(row, (board.length - col) - 1); // this is the maximum times we have to go back to check if queen is safe to place there left diagonally
         for (int i = 0; i < maxRight; i++) {
             if(board[row - 1][col + 1]){
                 return false;   // hence, it is not safe to place it there
@@ -73,6 +78,89 @@ public class NQueensProblem {
             }
             System.out.println();
         }
+    }
+
+
+    //Leetcode  solution for NQueens problem
+
+
+    public static List<List<String>> solveNQueens(int n) {
+
+        String[][] board = new String[n][n];
+
+        for(int i = 0; i < board.length; i++){  //initialize the arraylist with enpty string
+            for(int j = 0; j < board.length; j++){
+               board[i][j] = "";
+            }
+        }
+
+        return queensSolver(board, 0);
+    }
+
+
+    public static List<List<String>> queensSolver(String[][] board, int row){
+        if(row == board.length){
+            List<List<String>> list = new ArrayList<>();
+            list.add(displayBoard(board));
+            return list;
+        }
+
+        List<List<String>> list = new ArrayList<>();
+        for (int col = 0; col < board.length; col++) {
+            if(isSafeToPlace(board, row, col)){
+              board[row][col] = "0";
+              list.addAll(queensSolver(board, row + 1));
+              board[row][col] = ".";
+            }
+        }
+
+        return list;
+    }
+
+
+    private static List<String> displayBoard(String[][] board){
+        ArrayList<String> result = new ArrayList<>();
+
+        for(String[] nums : board){
+            StringBuilder value = new StringBuilder();
+            for(String element : nums){
+                if(element.equals("0")){
+                    value.append("Q");
+                }else value.append(".");
+            }
+          result.add(new String(value));
+       }
+        return result;
+    }
+
+
+    private static boolean isSafeToPlace(String[][] board, int row, int col){
+        //we check vertical rows
+        for (int i = 0; i < row; i++) {
+            if(board[i][col].equals("0")){
+                return false;
+            }
+        }
+
+
+        //check left diagonal
+        int maxLeft = Math.min(row, col);
+        for (int i = 0; i < maxLeft; i++) {
+            if(board[row - 1][col - 1].equals("0")){
+                return false;
+            }
+        }
+
+
+        //check right diagonal
+        int maxRight = Math.min(row, board.length - col - 1);
+        for (int i = 0; i < maxRight; i++) {
+            if(board[row - 1][col + 1].equals("0")){
+                return false;
+            }
+        }
+
+        return true;
     }
 }
 
