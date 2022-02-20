@@ -52,26 +52,30 @@ public class NKnightsProblem {
            }
        }
 
+       //check for going up and left
         if(isValid(board, row - 2, col - 1)){ //if we are not out of bounds
             if(board[row - 2][col - 1]){ //check if a knight is available there or not
                 return false;
             }
         }
 
+        //check for going left and up
+        if(isValid(board, row - 1, col - 2)){ //if we are not out of bounds
+            if(board[row - 1][col - 2]){ //check if a knight is available there or not
+                return false;
+            }
+        }
+
+        //check for going up and right
         if(isValid(board, row - 2, col + 1)){ //if we are not out of bounds
             if(board[row - 2][col + 1]){ //check if a knight is available there or not
                 return false;
             }
         }
 
+        //check for going right and up
         if(isValid(board, row - 1, col + 2)){ //if we are not out of bounds
             if(board[row - 1][col + 2]){ //check if a knight is available there or not
-                return false;
-            }
-        }
-
-        if(isValid(board, row - 1, col - 2)){ //if we are not out of bounds
-            if(board[row - 1][col - 2]){ //check if a knight is available there or not
                 return false;
             }
         }

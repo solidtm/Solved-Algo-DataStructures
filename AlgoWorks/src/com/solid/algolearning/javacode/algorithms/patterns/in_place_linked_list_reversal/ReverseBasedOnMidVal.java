@@ -23,10 +23,11 @@ public class ReverseBasedOnMidVal {
         int size = 0;
         while(head != null){
             size += 1;
+            head = head.next;
         }
+        System.out.println(size);
 
-        ListNode next  = null;
-        int i = 1;
+        ListNode next;
         if(size % 2 == 0){ //even
             head = reverse(head, 1, size / 2);
             next = reverse(head , size / 2 + 1, size);
@@ -55,6 +56,7 @@ public class ReverseBasedOnMidVal {
         ListNode curr = head;
         ListNode prev = null;
         ListNode next = null;
+
         while(!(curr.value > j)){
             next = curr.next;
             curr.next = prev;
