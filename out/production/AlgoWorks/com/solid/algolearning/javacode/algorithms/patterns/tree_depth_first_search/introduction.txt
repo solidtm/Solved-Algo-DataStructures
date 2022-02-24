@@ -4,3 +4,6 @@ This pattern is based on the Depth First Search (DFS) technique to traverse a tr
 We will be using recursion (or we can also use a stack for the iterative approach) to keep track of all the previous (parent) nodes while traversing. This also means that the space complexity of the algorithm will be O(H)O(H), where ‘H’ is the maximum height of the tree.
 
 Let’s jump onto our first problem to understand this pattern.
+
+Things to note: For a balanced tree, the depth (or height) of a balanced tree is O(logn) we can say that, at the most, each path can have logNlogN nodes in it. This means that the total size of the allPaths list will be O(N*logN)O(N∗logN).
+If the tree is not balanced, we will still have the same worst-case space complexity.
