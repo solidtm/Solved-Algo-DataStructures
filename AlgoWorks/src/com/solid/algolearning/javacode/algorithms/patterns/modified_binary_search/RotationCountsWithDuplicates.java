@@ -60,4 +60,10 @@ public class RotationCountsWithDuplicates {
     public static void main(String[] args) {
         System.out.println(countRotations(new int[] { 3, 3, 7, 3 }));
     }
+
+//    Time complexity
+//    This algorithm will run in O(logN)O(logN) most of the times, but since we only skip two numbers in case of duplicates instead of the half of the numbers, therefore the worst case time complexity will become O(N)O(N).
+//
+//    Space complexity#
+//    The algorithm runs in constant space O(1)O(1).
 }
