@@ -1,6 +1,6 @@
 package com.solid.algolearning.javacode.algorithms.patterns.sliding_window;
 
-public class SmallestSubArrayWithSum {
+public class MinSubArrayLengthWithSum {
 
 //    Given an array of positive numbers and a positive number ‘S,’ find the length of the smallest contiguous sub-array whose sum is greater than or equal to ‘S’. Return 0 if no such sub-array exists.
 //
@@ -23,11 +23,12 @@ public class SmallestSubArrayWithSum {
         System.out.println(findMinSubArray(7, new int[]{2, 1, 5, 2, 3, 2}));
         System.out.println(findMinSubArray(7, new int[]{2, 1, 5, 2, 8}));
         System.out.println(findMinSubArray(8, new int[]{3, 4, 1, 1, 6}));
+        System.out.println(findMinSubArray(7, new int[]{7}));
     }
 
-    public static int findMinSubArray(int s, int[] arr) {
-        if(arr.length == 1 && arr[0] >= s){
-            return arr[0];
+    public static int findMinSubArray(int target, int[] arr) {
+        if(arr.length == 1 && arr[0] >= target){
+            return arr.length;
         }
 
         int windowSum = 0, minLength = Integer.MAX_VALUE;
@@ -37,7 +38,7 @@ public class SmallestSubArrayWithSum {
         for(windowEnd = 0; windowEnd < arr.length; windowEnd++){
             windowSum += arr[windowEnd];  // add the next elements
 
-            while(windowSum >= s){
+            while(windowSum >= target){
                 //shrink the window
                 minLength = Math.min(minLength, windowEnd - windowStart + 1); //get the minimum window length
                 windowSum -= arr[windowStart]; // subtract the element going out

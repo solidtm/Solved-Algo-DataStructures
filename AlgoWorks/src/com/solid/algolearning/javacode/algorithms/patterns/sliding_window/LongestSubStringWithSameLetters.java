@@ -25,7 +25,7 @@ public class LongestSubStringWithSameLetters {
         Map<Character, Integer> frequencyMap = new HashMap<>();
 
         for(windowEnd = 0; windowEnd < str.length(); windowEnd++){
-            char rightChar = str.charAt(windowEnd);
+            char rightChar = str.charAt(windowEnd); //ABAB
             frequencyMap.put(rightChar, frequencyMap.getOrDefault(rightChar, 0) + 1);
             maxRepeatingCharacter = Math.max(maxRepeatingCharacter, frequencyMap.get(rightChar));
 
