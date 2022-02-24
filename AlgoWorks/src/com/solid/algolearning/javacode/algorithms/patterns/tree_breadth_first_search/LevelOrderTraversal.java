@@ -72,16 +72,16 @@ public static List<List<Integer>> traverseIterative(TreeNode root) {
         return nodeList;
     }
 
-    public static void compute(List<List<Integer>> result, TreeNode root, int height){
+    public static void compute(List<List<Integer>> result, TreeNode root, int level){
         if(root == null) return;
-        if (height == result.size()){
-            ArrayList<Integer> level = new ArrayList<>();
-            result.add(level);
+        if (level == result.size()){
+            ArrayList<Integer> levelList = new ArrayList<>();
+            result.add(levelList);
         }
 
-        result.get(height).add(root.val);
-        compute(result, root.left, height+1);
-        compute(result, root.right, height+1);
+        result.get(level).add(root.val);
+        compute(result, root.left, level + 1);
+        compute(result, root.right, level + 1);
     }
 
 
