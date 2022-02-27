@@ -60,6 +60,7 @@ import java.util.*;
 public class MaximizeCapital {
     public static int findMaximumCapital(int[] capital, int[] profits, int numberOfProjects, int initialCapital) {
         int n = profits.length;
+
         PriorityQueue<Integer> minCapitalHeap = new PriorityQueue<>(n, (i1, i2) -> capital[i1] - capital[i2]);
         PriorityQueue<Integer> maxProfitHeap = new PriorityQueue<>(n, (i1, i2) -> profits[i2] - profits[i1]);
 
@@ -69,6 +70,7 @@ public class MaximizeCapital {
 
         // let's try to find a total of 'numberOfProjects' best projects
         int availableCapital = initialCapital;
+
         for (int i = 0; i < numberOfProjects; i++) {
             // find all projects that can be selected within the available capital and insert them in a max-heap
             while (!minCapitalHeap.isEmpty() && capital[minCapitalHeap.peek()] <= availableCapital)
