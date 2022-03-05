@@ -12,7 +12,7 @@ public class _12_CountingBits {
     // to use dynamic programming/memoization
     // what we do here is to use an array to store values of
     // what we have computed before wherein the MSB is at a particular value/index
-    //
+    // when we get the
 
     static int[] countBits(int n){
         int[] dp = new int[n + 1];

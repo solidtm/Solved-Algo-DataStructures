@@ -16,7 +16,12 @@ public class AdjacenyMatrix {
 
       //edge between 3 and 1
         adjacencyMatrix[3][1] = 1;
-        adjacencyMatrix[1][3] = 1;
+        adjacencyMatrix[1][3] = 1;  //vice cersa for undirected graph
+
+        //In the case where we have a weighted graph, then,
+        // we will represent the weight number for all the places
+        //where we have a 1 ie, places we have a path.
+
 
         System.out.println(Arrays.deepToString(adjacencyMatrix));
     }
