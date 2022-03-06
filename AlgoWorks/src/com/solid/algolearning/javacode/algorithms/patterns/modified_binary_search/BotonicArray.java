@@ -58,6 +58,7 @@ public class BotonicArray {
         System.out.println(findMax(new int[] { 3, 8, 3, 1 }));
         System.out.println(findMax(new int[] { 1, 3, 8, 12 }));
         System.out.println(findMax(new int[] { 10, 9, 8 }));
+        System.out.println(findMax(new int[] { 0, 2, 1, 0 }));
     }
 
 //    Time complexity#

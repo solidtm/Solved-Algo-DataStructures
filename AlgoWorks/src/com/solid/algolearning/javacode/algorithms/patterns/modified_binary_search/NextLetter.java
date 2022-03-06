@@ -34,7 +34,8 @@ package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_sear
 //
 //        We can use a similar approach as discussed in Ceiling of a Number. There are a couple of differences though:
 //
-//        The array is considered circular, which means if the ‘key’ is bigger than the last letter of the array or if it is smaller than the first letter of the array, the key’s next letter will be the first letter of the array.
+//        The array is considered circular, which means if the ‘key’ is bigger than the last letter of the array or if it is smaller than the first letter of the array,
+//        the key’s next letter will be the first letter of the array.
 //        The other difference is that we have to find the next biggest letter which can’t be equal to the ‘key’.
 //        This means that we will ignore the case where key == arr[middle]. To handle this case, we can update our start range to start = middle +1.
 //        In the end, instead of returning the element pointed out by start, we have to return the letter pointed out by start % array_length.

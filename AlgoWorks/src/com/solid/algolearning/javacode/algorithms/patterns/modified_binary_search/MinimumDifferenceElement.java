@@ -32,19 +32,21 @@ package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_sear
 
 public class MinimumDifferenceElement {
     public static int searchMinDiffElement(int[] arr, int key) {
-        if (key < arr[0])
+        if (key < arr[0])    //edge cases
             return arr[0];
         if (key > arr[arr.length - 1])
             return arr[arr.length - 1];
 
         int start = 0, end = arr.length - 1;
+        //perform normal binary search to find the key.
         while (start <= end) {
             int mid = start + (end - start) / 2;
+
             if (key < arr[mid]) {
                 end = mid - 1;
             } else if (key > arr[mid]) {
                 start = mid + 1;
-            } else {
+            } else { //key is equal to the middle valus
                 return arr[mid];
             }
         }
@@ -66,8 +68,8 @@ public class MinimumDifferenceElement {
 
 //    Time complexity#
 //    Since, we are reducing the search range by half at every step,
-//    this means the time complexity of our algorithm will be O(logN)O(logN) where ‘N’ is the total elements in the given array.
+//    this means the time complexity of our algorithm will be O(logN) where ‘N’ is the total elements in the given array.
 //
 //    Space complexity#
-//    The algorithm runs in constant space O(1)O(1).
+//    The algorithm runs in constant space O(1).
 }

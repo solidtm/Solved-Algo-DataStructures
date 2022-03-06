@@ -58,7 +58,7 @@ public class SearchSortedInfiniteArray {
     public static int search(ArrayReader reader, int key) {
         // find the proper bounds first
         int start = 0, end = 1;
-        while (reader.get(end) < key) {
+        while (end < key) {
             int newStart = end + 1;
             end += (end - start + 1) * 2; // increase to double the bounds size
             start = newStart;
@@ -92,9 +92,9 @@ public class SearchSortedInfiniteArray {
 
 //    Time complexity#
 //    There are two parts of the algorithm. In the first part, we keep increasing the bound’s size exponentially (double it every time)
-//    while searching for the proper bounds. Therefore, this step will take O(logN)O(logN) assuming that the array will have maximum ‘N’ numbers.
-//    In the second step, we perform the binary search which will take O(logN)O(logN), so the overall time complexity of our algorithm will
-//    be O(logN + logN)O(logN+logN) which is asymptotically equivalent to O(logN)O(logN).
+//    while searching for the proper bounds. Therefore, this step will take O(logN) assuming that the array will have maximum ‘N’ numbers.
+//    In the second step, we perform the binary search which will take O(logN), so the overall time complexity of our algorithm will
+//    be O(logN + logN) which is asymptotically equivalent to O(logN).
 //
 //    Space complexity#
 //    The algorithm runs in constant space O(1)O(1).
