@@ -1,79 +1,162 @@
 package com.solid.algolearning.javacode.data_structures.linkedlist;
 
+import java.util.List;
+
 public class LinkedList {
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode() {}
-     *     ListNode(int val) { this.val = val; }
-     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
-//     ListNode reverseList(ListNode head) {
-////         check if the LinkedList contains one or 0 nodes
-//         class Solution {
-////        public       if(head.){
-//
-//            }
-//        }
-//    }
-//    We want to create a linkedList data structure that has 10 --> 5 --> 6
-//
 
-//    prepend(){
-//        const newNode = {
-//                value: value,
-//                next: null
-//        }
-//
-//        newNode.next = this.head;
-//        this.head = newNode;
-//        length++;
-//        return this;
-//    }
+    private ListNode head;
+    private ListNode tail;
+    private int size;
+    //    *
+//     * Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
 
-//    insert(index, value){
-//    First of all check the inputs and be sure the index is valid
-//            if(index == 0){
-//                this.prepend(value);
-//            }
-//
-//            if(index >= this.length){
-//                this.append(value);
-//            }
+        ListNode() {
+        }
 
-//        const newNode = {
-//                value = value;
-//                next = null;
-//        }
-//         const leader = this.traverseToIndex(index - 1);
-//         const holdingPointer = leader.next;
-//         leader.next = newNode;
-//         newNode.next = holdingPointer;
-//         this.length++;
-//        return this.printList();
-//    }
+        ListNode(int val) {
+            this.val = val;
+        }
 
-//    traverseToIndex(index){
-//        //check parameters
-//        let counter = 0;
-//        let  currentNode = this.head;
-//        while (counter != index){
-//            currentNode = currentNode.next;
-//            counter++;
-//        }
-//        return currentNode;
-//    }
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
 
-//    remove(index){
-//       check params, if index is +ve number or higher than our list length etc.
-//
-//        const leader = this.traverseToIndex(index - 1);
-//        const unwantedNode = leader.next;
-//        leader.next = unwantedNode.next;
-//        this.length--;
-//        return this.printList();
-//    }
+        @Override
+        public String toString() {
+            return "ListNode{" +
+                    "val=" + val + '}';
+        }
+    }
+
+    public int size(){
+        return size;
+    }
+
+
+//    insert at tail
+    public void insertFirst(int val) {
+        ListNode node = new ListNode(val);
+        node.next = head;
+        head = node;
+
+        if(tail == null){
+            tail = head;
+        }
+        size++;
+    }
+
+
+//    insert at tail
+    public void insertLast(int val) {
+        if(tail == null){
+            insertFirst(val);
+            return;
+        }
+
+        ListNode node = new ListNode(val);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
+
+    //insert at particular index
+    public void insert(int val, int index) {
+        if(index == 0){
+            insertFirst(val);
+            return;
+        }if(index == size){
+           insertLast(val);
+           return;
+        }
+
+        ListNode temp = head;
+        for (int i = 1; i < index && temp != null; i++) {
+            temp = temp.next;
+        }
+
+        assert temp != null;
+        ListNode node = new ListNode(val, temp.next);
+        temp.next = node;
+        size++;
+    }
+
+    public void insertRecursive(){
+
+    }
+
+    public int deleteFirst(){
+        int val = head.val;
+        head = head.next;
+
+        if(head == null){
+            tail = null;
+        }
+        size--;
+
+        return val;
+    }
+
+    public int deleteLast(){
+        if(size <= 1) return deleteFirst();
+
+        ListNode secondLast = get(size - 2);   //node points to the second last item in the ist
+        int val = tail.val;
+        tail = secondLast;
+        tail.next = null;
+
+        return val;
+    }
+
+    public int delete(int index){
+        if(index == 1) return deleteFirst();
+        if(index == size - 1) return deleteLast();
+
+        ListNode previous = get(index - 1);   //node points to the previous index before the index in the ist
+        int val = previous.next.val;
+        previous.next = previous.next.next;
+
+        return val;
+    }
+
+
+    public ListNode get(int index){   //gets the node at any index.
+       ListNode node = head;
+
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+
+        return node;
+    }
+
+
+    public ListNode find(int val){   //gets the node at any index.
+        ListNode node = head;
+
+        while(node != null){
+            if(node.val == val){
+                return node;
+            }
+
+            node = node.next;
+        }
+
+        return null;
+    }
+
+//   display the linkedList
+    public void display(){
+        ListNode temp = head;
+
+        while(temp != null){
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
 }
