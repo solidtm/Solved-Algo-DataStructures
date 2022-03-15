@@ -54,8 +54,8 @@ public class AllRootToLeafPaths {
         root.left.left = new TreeNode(4);
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
-        int sum = 23;
+
         List<List<Integer>> result = findPaths(root);
-        System.out.println("Tree paths with sum " + sum + ": " + result);
+        System.out.println("Tree paths: " + result);
     }
 }

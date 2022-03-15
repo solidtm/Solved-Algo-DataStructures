@@ -85,10 +85,20 @@ public class LinkedList {
         size++;
     }
 
-    public void insertRecursive(){
-
+    public void insertRecursive(int val, int index){
+        head = insertRec(val, index, head);
     }
 
+    private ListNode insertRec(int val, int index, ListNode node){
+        if(index == 0){
+            ListNode temp = new ListNode(val, node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val, index - 1, node.next);
+        return node;
+    }
     public int deleteFirst(){
         int val = head.val;
         head = head.next;

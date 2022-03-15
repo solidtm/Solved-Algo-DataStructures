@@ -2,15 +2,16 @@ package com.solid.algolearning.javacode.data_structures.linkedlist;
 
 public class LL {
     public static void main(String[] args) {
-//        LinkedList list = new LinkedList();
-//
-//        list.insertFirst(3);
-//        list.insertFirst(2);
-//        list.insertFirst(8);
-//        list.insertFirst(17);
-//        list.insertLast(99);
-//        list.insert(100, 3);
-//        list.display();
+        LinkedList list = new LinkedList();
+
+        list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(8);
+        list.insertFirst(17);
+        list.insertLast(99);
+        list.insert(100, 3);
+        list.insertRecursive(123, 3);
+        list.display();
 //
 //        list.deleteFirst();
 //        list.deleteLast();
@@ -32,15 +33,15 @@ public class LL {
 //
 //        dlList.display();
 
-        CircularLinkedList circularList = new CircularLinkedList();
-
-        circularList.insert(2);
-        circularList.insert(4);
-        circularList.insert(6);
-        circularList.insert(10);
-        circularList.insert(12);
-
-        circularList.delete(12);
-        circularList.display();
+//        CircularLinkedList circularList = new CircularLinkedList();
+//
+//        circularList.insert(2);
+//        circularList.insert(4);
+//        circularList.insert(6);
+//        circularList.insert(10);
+//        circularList.insert(12);
+//
+//        circularList.delete(12);
+//        circularList.display();
     }
 }

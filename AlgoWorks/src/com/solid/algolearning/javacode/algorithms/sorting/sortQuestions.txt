@@ -15,7 +15,7 @@ Which sorting algorithm will you use to solve the following sorting problems?
 
 4. Massive database (can't fill all into memory) needs to sort through past year's user data
     Answer ==> Obviously, Merge sort will be very good to use here, as we are not concerned with memory as all the data cannot fit in memory,
-    what we can be really concerned with here could be the performance, and I want to make sure i cna get O(nlogn) time complexity.
+    what we can be really concerned with here could be the performance, and I want to make sure i can get O(nlogn) time complexity.
 
 5. Almost sorted Udemy review data needs to update and add 2 new reviews
     Answer ==> Here I would use Insertion sort because the data is almost sorted. Insertion sort performs really fast on almost sorted data,
@@ -32,12 +32,12 @@ Which sorting algorithm will you use to solve the following sorting problems?
     that memory space.
 
 8. You want to teach sorting for the first time
-    Answer ==> Obviously this would be bubble sort and selection sort, because it is the first thing that comes to mid for every individual and mostly used
+    Answer ==> Obviously this would be bubble sort and selection sort, because it is the first thing that comes to mind for every individual and mostly used
     for teaching the basic concepts of sorting.
 
 9. Note ==> Java JDK uses 2 sort algorithms in the Arrays.sort() method:
      1. Quick sort: Used to sort arrays of primitive values --> this is because stability does not matter here and there is no way to distinguish 2 ints with same value.
-     2. Merge sort: Used to sort arrays of Objects --> this is because objects can hae pointers and will need a stable algorithm like merge sort
+     2. Merge sort: Used to sort arrays of Objects --> this is because objects can have pointers and will need a stable algorithm like merge sort
    Note ==> You want to use Quick sort when your average case matter more than the worst case
             Merge sort on the other hand is great because it has O(nlogn) guaranteed and is stable (preserves natural ordering)
             although the space complexity is a little higher than Quick sort, it is a great sort algorithm to use.

@@ -35,7 +35,7 @@ public class QuickSort {
             }
         }
 
-        //now my pivot is at correct position, please sort tthe two halves
+        //now my pivot is at correct position, please sort the two halves
         quickSort(arr, low, end);
         quickSort(arr, start, high);
     }

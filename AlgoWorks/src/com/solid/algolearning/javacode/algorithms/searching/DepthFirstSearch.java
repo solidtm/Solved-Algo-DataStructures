@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DepthFirstSearch {
-    TreeNode root;
-    List<Integer> list;
+
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         TreeNode tree = new TreeNode(1);
@@ -37,6 +36,7 @@ public class DepthFirstSearch {
     }
 
     private static List<Integer> traverseInOrder(TreeNode node, List<Integer> list) {
+        if(node == null) return new ArrayList<>();
         //we check if the node has a left child, if yes we traverse all the way down using recursion
         if (node.left != null){
             traverseInOrder(node.left, list);
@@ -51,6 +51,7 @@ public class DepthFirstSearch {
     }
 
     private static List<Integer> traversePreOrder(TreeNode node, List<Integer> list) {
+        if(node == null) return new ArrayList<>();
         //Here, we want to add to the list at the very beginning, ie add the parent first and then check left and right nodes
         list.add(node.val); // put the node value to the list before checking if it has left and right children
         if (node.left != null){
@@ -65,6 +66,7 @@ public class DepthFirstSearch {
     }
 
     private static List<Integer> traversePostOrder(TreeNode node, List<Integer> list) {
+        if(node == null) return new ArrayList<>();
         //Here we check if left has child, and we insert into list, same with right before we visit parent
         if (node.left != null){
             traversePostOrder(node.left, list);

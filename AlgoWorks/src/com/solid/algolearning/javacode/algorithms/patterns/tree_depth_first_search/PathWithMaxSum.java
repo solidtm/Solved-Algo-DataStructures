@@ -59,6 +59,14 @@ public class PathWithMaxSum {
         root.right.right.left = new TreeNode(9);
         System.out.println("Maximum Path Sum: " + findMaximumPathSum(root));
 
+        TreeNode root2 = new TreeNode(12);
+        root2.left = new TreeNode(7);
+        root2.right = new TreeNode(1);
+        root2.left.left = new TreeNode(4);
+        root2.right.left = new TreeNode(10);
+        root2.right.right = new TreeNode(5);
+        System.out.println("Maximum Path Sum: " + findMaximumPathSum(root2));
+
         root = new TreeNode(-1);
         root.left = new TreeNode(-3);
         System.out.println("Maximum Path Sum: " + findMaximumPathSum(root));
