@@ -2,7 +2,8 @@ package com.solid.algolearning.javacode.algorithms.patterns.cyclic_sort;
 
 
 //Problem Statement#
-//        We are given an array containing n distinct numbers taken from the range 0 to n. Since the array has only n numbers out of the total n+1 numbers, find the missing number.
+//        We are given an array containing n distinct numbers taken from the range 0 to n.
+//        Since the array has only n numbers out of the total n+1 numbers, find the missing number.
 //
 //        Example 1:
 //
@@ -18,6 +19,7 @@ public class MissingNumber {
     public static int findMissingNumber(int[] nums) {
         int i = 0;
         int result = 0;
+
         while(i < nums.length){
             if(nums[i] < nums.length && nums[i] != nums[nums[i]]){
                 swap(nums, i, nums[i]);

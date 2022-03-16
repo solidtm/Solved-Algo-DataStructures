@@ -12,9 +12,9 @@ import java.util.ArrayList;
 // Follow up: given a 9 faced die, instead of a 6 faced die
 public class DiceThrow {
     public static void main(String[] args) {
-        diceCombinations("", 4);
+//        diceCombinations("", 4);
         System.out.println(diceCombinationsReturn("", 4));
-        diceFaceCombinations("", 6, 9);
+//        diceFaceCombinations("", 6, 9);
 
     }
 
