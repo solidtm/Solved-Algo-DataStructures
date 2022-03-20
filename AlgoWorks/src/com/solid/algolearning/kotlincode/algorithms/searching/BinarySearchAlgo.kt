@@ -21,11 +21,15 @@ fun binarySearch(a: IntArray, key: Int): Int {  //[1, 2, 3, 4, 5] high = 4, low 
     }
     return -1
 }
-
+var s = "[a-z0-9]+@[a-z]+\\.[a-z]{2,3}".toRegex()
+var p = "^([0]{1})[0-9]{10}\$".toRegex()
 fun main(args: Array<String>) {
-    val stopWatch = StopWatch()
-    val array = intArrayOf(6, 13, 14, 25, 33, 43, 51, 64, 72, 84, 93, 95, 96, 97, 99)
-    val key = 72
-    println(binarySearch(array, key))
-    println(stopWatch.elapsedTime())
+//    val stopWatch = StopWatch()
+//    val array = intArrayOf(6, 13, 14, 25, 33, 43, 51, 64, 72, 84, 93, 95, 96, 97, 99)
+//    val key = 72
+//    println(binarySearch(array, key))
+//    println(stopWatch.elapsedTime())
+
+    println("mrichard@gmail.com".matches(s))
+    println("07067807998".matches(p))
 }

@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class QuickSort {
     public static void main(String[] args) {
         int[] numbers = {34, 7, 65, 2, 8, 1, 2};
-        quickSort(numbers, 0, numbers.length-1);
-        System.out.println(Arrays.toString(numbers));
+        int[] numbers2 = {2, 2, 2, 2, 2, 2, 2};
+        quickSort(numbers2, 0, numbers2.length-1);
+        System.out.println(Arrays.toString(numbers2));
     }
 
     static void quickSort(int[] arr, int low, int high){
@@ -15,7 +16,7 @@ public class QuickSort {
         int start = low;
         int end = high;
 
-        int mid = start + (end - start) / 2;
+        int mid = start + (end - start) / 2;    //{2, 1, 65, 2, 8, 7, 34};
 
         int pivot = arr[mid];
 
