@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class DiceThrow {
     public static void main(String[] args) {
 //        diceCombinations("", 4);
-        System.out.println(diceCombinationsReturn("", 4));
+        System.out.println(diceFaceCombinationsReturn("", 4, 6));
 //        diceFaceCombinations("", 6, 9);
 
     }

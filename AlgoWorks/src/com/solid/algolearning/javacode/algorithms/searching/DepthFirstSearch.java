@@ -1,7 +1,7 @@
 package com.solid.algolearning.javacode.algorithms.searching;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class DepthFirstSearch {
 
@@ -21,6 +21,7 @@ public class DepthFirstSearch {
         System.out.println(DFSInInOrder(tree, list));
         System.out.println(DFSPreOrder(tree, list));
         System.out.println(DFSInPostOrder(tree, list)); //[4, 5, 2, 6, 7, 3, 1]
+        System.out.println(containsValue(tree, new TreeNode(4), new HashSet<>()));
     }
 
     public static List<Integer> DFSInInOrder(TreeNode node, List<Integer> list){
@@ -79,5 +80,18 @@ public class DepthFirstSearch {
         list.add(node.val);
 
         return list;
+    }
+
+    //this dfs checks if a target element is in the tree
+    static boolean containsValue(TreeNode curr, TreeNode target, HashSet<TreeNode> visited){
+
+        if(curr == target) return true;
+
+        if(curr != null ){
+            visited.add(curr.left);
+        }
+
+        assert curr != null;
+        return containsValue(curr.left, target, visited) || containsValue(curr.right, target, visited);
     }
 }

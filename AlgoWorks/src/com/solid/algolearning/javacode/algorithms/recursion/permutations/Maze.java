@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 // If you are at the start of a 3 x 3 maze/grid, how many possible ways can you go from a point to a target in the maze
 // Follow-up question is to actually print the paths to the target point in the maze
+
 public class Maze {
     public static void main(String[] args) {
         System.out.println(maze(3, 3));
@@ -104,7 +105,7 @@ public class Maze {
 
         if(!maze[row][col]){
            return;
-        }//base condition for the encounter of the river, the matrix is a grid of boolean values(true/false)
+        }//base condition for the encounter of the river/obstacle, the matrix is a grid of boolean values(true/false)
 
         if (row < maze.length - 1) {
             mazePathWithObstacle(p + 'D', maze, row + 1, col); //move down OR
