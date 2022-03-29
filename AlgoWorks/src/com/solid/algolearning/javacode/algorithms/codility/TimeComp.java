@@ -1,4 +1,6 @@
-package com.solid.algolearning.javacode.algorithms.prep_problems;
+package com.solid.algolearning.javacode.algorithms.codility;
+
+//https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
 
 public class TimeComp {
     public static void main(String[] args) {
@@ -22,14 +24,14 @@ public class TimeComp {
         return maxDiff;
     }
 
-    public int solution(int x, int[] arr) {
-        int index = -1;
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i] == x){
-                index = i;
-            }
-        }
-
-        return index;
-    }
+//    public int solution(int x, int[] arr) {
+//        int index = -1;
+//        for(int i = 0; i < arr.length; i++){
+//            if(arr[i] == x){
+//                index = i;
+//            }
+//        }
+//
+//        return index;
+//    }
 }
