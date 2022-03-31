@@ -1,5 +1,7 @@
 
-package com.solid.algolearning.javacode.algorithms.searching;
+package com.solid.algolearning.javacode.algorithms.searching.binary_search;
+
+import com.solid.algolearning.javacode.algorithms.searching.StopWatch;
 
 public class BinarySearchAlgo {
     public static void main(String[] args) {
