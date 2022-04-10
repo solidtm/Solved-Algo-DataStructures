@@ -33,7 +33,7 @@ public class MaxSumSubArrayProblem {
         for(windowEnd = 0; windowEnd < arr.length; windowEnd++){
             windowSum += arr[windowEnd];  // add the next element
 
-//          slide the window, we don't need to slide if we've not hit the required window size of 'k'
+//          slide the window, we don't need to slide if we've hit the required window size of 'k'
             if(windowEnd >= k - 1){
                 result = Math.max(result, windowSum);     // if result is less than windowSum, always set the value to
 

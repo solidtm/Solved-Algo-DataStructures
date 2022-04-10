@@ -3,7 +3,7 @@ package com.solid.algolearning.javacode.algorithms.math;
 //whether perfect square or not...
 public class BinarySearchSquareRoot {
     public static void main(String[] args) {
-     int num = 40;
+     int num = 4;
      int precision = 3;
 
         System.out.printf("%.3f", sqrt(num, precision));
@@ -15,7 +15,7 @@ public class BinarySearchSquareRoot {
         double root = 0.0;
 
         while(start <= end){
-            int mid = start - (start + end) / 2;
+            int mid = start + (end - start) / 2;
 
             if((mid * mid) == num){ //we found a perfect square/root
                 root = mid;

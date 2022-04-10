@@ -1,14 +1,17 @@
 package com.solid.algolearning.javacode.algorithms.recursion.permutations;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 //Here we are asked to print all the permutations of a given String
 //note that string substring method end index is exclusive
 public class Permutations {
     public static void main(String[] args) {
-        permutations("", "abc");
-        System.out.println(permutationsList("", "abc"));
-        System.out.println(permutationsCount("", "abcd"));
+//        permutations("", "abc");
+        ArrayList<String> list = permutationsList("", "abc");
+        Collections.sort(list);
+        System.out.println(list);
+//        System.out.println(permutationsCount("", "abcd"));
     }
 
     static void permutations(String p, String up){

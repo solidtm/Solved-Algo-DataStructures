@@ -14,7 +14,7 @@ public class Subset {
         int[] arr2 = {1,2,2};
         List<List<Integer>> answer2 = subsetIterativeDuplicate(arr2);
 
-        System.out.println(answer2);
+//        System.out.println(answer2);
     }
 
     static List<List<Integer>> subsetIterative(int[] arr){
@@ -23,11 +23,13 @@ public class Subset {
         outer.add(new ArrayList<>());  //initially the list has an empty list
         for(int num : arr){//for every number in arr,
             int n = outer.size();  //size of outer list
+
             for (int i = 0; i < n; i++) { //a new arraylist will be created
                 List<Integer> internal = new ArrayList<>(outer.get(i));
                 internal.add(num);
                 outer.add(internal); ///add individual lists to the main list
             }
+            System.out.println(outer);
         }
 
         return outer;
