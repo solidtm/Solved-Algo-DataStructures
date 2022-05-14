@@ -13,7 +13,11 @@ public class NQueensProblem {
 //        boolean[][] board = new boolean[n][n];
 //        System.out.println(placeQueens(board, 0));
 
-        System.out.println(solveNQueens(5));
+        List<List<String>>  res = solveNQueens(5);
+        for (List<String> re : res) {
+            System.out.println(re);
+        }
+
     }
 
     static  int placeQueens(boolean[][] board, int row ){ //return the number of ways we can place queens, true means the queen is placed, we are starting col from 0 all the time no neeed to pass it in paaram

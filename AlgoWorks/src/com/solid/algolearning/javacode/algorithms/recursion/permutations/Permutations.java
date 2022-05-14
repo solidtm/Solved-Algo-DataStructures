@@ -8,11 +8,37 @@ import java.util.Collections;
 public class Permutations {
     public static void main(String[] args) {
 //        permutations("", "abc");
-        ArrayList<String> list = permutationsList("", "abc");
-        Collections.sort(list);
-        System.out.println(list);
+//        ArrayList<String> list = permutationsList("", "abc");
+//        Collections.sort(list);
+//        System.out.println(list);
 //        System.out.println(permutationsCount("", "abcd"));
+
+        char[] array = new char[] { 'a', 'b', 'c', 'd' };
+        permutate(array, 0);
     }
+
+    private static void swap(char[] str, int i, int j) {
+        char temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+
+    static void permutate(char[] str, int index) {
+
+        // base case
+        if (index == str.length) {
+            System.out.println(str);
+            return;
+        }
+
+        // regular case
+        for (int i = index; i < str.length; i++) {
+            swap(str, index, i);
+            permutate(str, index + 1);
+            swap(str, index, i);
+        }
+    }
+
 
     static void permutations(String p, String up){
         if(up.isEmpty()){
