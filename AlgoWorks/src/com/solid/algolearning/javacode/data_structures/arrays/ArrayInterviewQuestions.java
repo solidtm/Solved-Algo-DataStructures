@@ -44,9 +44,25 @@ public class ArrayInterviewQuestions {
 
         int[] nonDecreasingArray = {0,0,1,1,1,2,2,3,3,4};
         System.out.println(removeDuplicates(nonDecreasingArray));
+
+        System.out.println(Arrays.toString(maxMin(new int[]{1, 2, 3, 4, 5, 6, 7})));
     }
 
 
+    public static int[] maxMin(int[] arr) {
+
+        int n = arr.length;
+        int x = 1;
+
+        for(int i = 0; i + 1< arr.length; i+=2){
+            arr[i] = n;
+            arr[i+1] = x;
+            n--;
+            x++;
+        }
+
+        return arr;
+    }
 
     //    Question 1 solution:
     public static void reverse(String args) {
