@@ -9,12 +9,9 @@ public class LinkedList {
     private int size;
     //    *
 //     * Definition for singly-linked list.
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
-
-        ListNode() {
-        }
 
         ListNode(int val) {
             this.val = val;
@@ -23,12 +20,6 @@ public class LinkedList {
         ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val + '}';
         }
     }
 
