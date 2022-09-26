@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.dynamic_programming;
+package com.solid.algolearning.javacode.algorithms.dynamic_programming.dp_problems;
 
 public class GridPathsTopDown {
     public static void main(String[] args) {

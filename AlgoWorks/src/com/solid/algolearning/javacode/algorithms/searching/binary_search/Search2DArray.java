@@ -7,12 +7,14 @@ package com.solid.algolearning.javacode.algorithms.searching.binary_search;
 //        The first integer of each row is greater than the last integer of the previous row.
 public class Search2DArray {
     public static void main(String[] args) {
+        int[][] nums = new int[][]{{1, 2}, {4, 5}};
 
+        System.out.println(searchMatrix(nums, 2));
     }
 
     // we could think of the array as a linear array since it is all sorted in ascending order
     // then we can perform binary search on it.
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public static boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length; //rows
         int n = matrix[0].length; //cols
 

@@ -84,7 +84,7 @@ public class DijkstraAlgorithm {
             }
         }
 
-        for (int i = 0; i < 6; i++) { //priint the distance from source to vertices
+        for (int i = 0; i < 6; i++) { //print the distance from source to vertices
             System.out.println(i + "th distance from the source node: " + dist[i]);
         }
 

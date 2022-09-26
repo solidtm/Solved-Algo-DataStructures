@@ -17,18 +17,10 @@ public class ImplStackUsingQueueProblem {
     /** Initialize your data structure here. */
     private Queue<Integer> q1;
     private Queue<Integer> q2;
-    private int first;
 
     public ImplStackUsingQueueProblem() {
         q1 = new LinkedList<>();   //first queue
         q2 = new LinkedList<>(); //second queue
-    }
-
-
-    private void swapQ(){
-        Queue<Integer> temp = q1;
-        q1 = q2;
-        q2 = temp;
     }
 
     /** Push element x to the back of queue. ie unto stack in this case*/
@@ -87,7 +79,6 @@ public class ImplStackUsingQueueProblem {
         System.out.println(myStack.pop());
         System.out.println("=================");
         System.out.println(myStack.top());
-//        System.out.println(myStack.top());
         System.out.println("=================");
         System.out.println(myStack.empty());
 

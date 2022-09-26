@@ -6,15 +6,15 @@ import java.util.ArrayList;
 // Follow-up question is to actually print the paths to the target point in the maze
 public class Maze {
     public static void main(String[] args) {
-        System.out.println(maze(3, 3));
-        mazePaths("", 3, 3);
-        System.out.println(mazePathsReturn("", 3, 3));
-        System.out.println(mazePathsReturnWithDiagonal("", 3, 3));
+//        System.out.println(maze(3, 3));
+//        mazePaths("", 3, 3);
+//        System.out.println(mazePathsReturn("", 3, 3));
+//        System.out.println(mazePathsReturnWithDiagonal("", 3, 3));
 
         boolean[][] maze = {
                 {true, true, true},
-                {true, false, true},
                 {true, true, true},
+                {true, true, false},
         };
 
         mazePathWithObstacle("", maze, 0, 0);
@@ -106,8 +106,19 @@ public class Maze {
            return;
         }//base condition for the encounter of the river, the matrix is a grid of boolean values(true/false)
 
+        if(row == maze.length - 1 && col < maze[0].length - 1){
+            if(!maze[row][col]){
+                System.out.println("unable");
+                return;
+            }
+        }
+
+        if (row < maze.length - 1 && col < maze[0].length - 1) {
+            mazePathWithObstacle(p + 'D', maze, row + 1, col + 1); //move down OR
+        }
+
         if (row < maze.length - 1) {
-            mazePathWithObstacle(p + 'D', maze, row + 1, col); //move down OR
+            mazePathWithObstacle(p + 'H', maze, row + 1, col); //move down OR
         }
 
         if (col < maze[0].length - 1) {

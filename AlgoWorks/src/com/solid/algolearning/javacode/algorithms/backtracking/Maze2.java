@@ -7,7 +7,7 @@ public class Maze2 {
 
         boolean[][] maze = {
                 {true, true, true},
-                {true, true, true},
+                {true, false, false},
                 {true, true, true},
         };
 

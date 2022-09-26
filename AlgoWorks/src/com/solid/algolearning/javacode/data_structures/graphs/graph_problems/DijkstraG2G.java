@@ -72,7 +72,7 @@ public class DijkstraG2G {
         }
 
         // print the constructed distance array
-        printSolution(dist);
+//        printSolution(dist);
     }
 
 

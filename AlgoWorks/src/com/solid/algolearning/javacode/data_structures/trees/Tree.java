@@ -1,12 +1,12 @@
 package com.solid.algolearning.javacode.data_structures.trees;
 
 public class Tree {
-   class Node{
+   static class Node{
        Node left, right;
        int data;
 
        public Node(int data){
-           this.data = data;;
+           this.data = data;
        }
 
        //inserts a node to the tree

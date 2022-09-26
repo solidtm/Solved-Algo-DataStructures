@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.dynamic_programming;
+package com.solid.algolearning.javacode.algorithms.dynamic_programming.dp_problems;
 
 //https://cses.fi/problemset/task/1638
 
