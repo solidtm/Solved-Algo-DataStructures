@@ -13,8 +13,7 @@ import java.util.*;
 
 public class MergeIntervals {
     public static List<Interval> merge(List<Interval> intervals) {
-        if (intervals.size() < 2)
-            return intervals;
+        if (intervals.size() < 2) return intervals;
 
         // sort the intervals by start time
         intervals.sort((a, b) -> Integer.compare(a.start, b.start));

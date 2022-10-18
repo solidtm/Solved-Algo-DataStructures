@@ -53,7 +53,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.bitwise_xor;
 
 
 
-public class ComplementOfBase10Num {
+public class ComplimentOfBase10Num {
 
         public static int bitwiseComplement(int num) {
             // count number of total bits in 'num'
