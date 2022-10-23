@@ -1,4 +1,4 @@
-package com.solid.algolearning.javacode.algorithms.patterns.two_heaps;
+package com.solid.algolearning.javacode.algorithms.patterns.top_k_elements;
 
 import java.util.*;
 public class KClosestElementsToX {
