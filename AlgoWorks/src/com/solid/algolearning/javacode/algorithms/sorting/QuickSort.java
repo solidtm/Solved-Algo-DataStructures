@@ -4,10 +4,9 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] numbers = {34, 7, 65, 2, 8, 1, 2};
-        int[] numbers2 = {55, 23, 26, 2, 18, 78, 23, 8, 2, 3};
-        quickSort(numbers2, 0, numbers2.length-1);
-        System.out.println(Arrays.toString(numbers2));
+        int[] numbers = {55, 23, 26, 2, 18, 78, 23, 8, 2, 3};
+        quickSort(numbers, 0, numbers.length-1);
+        System.out.println(Arrays.toString(numbers));
     }
 
     static void quickSort(int[] arr, int low, int high){

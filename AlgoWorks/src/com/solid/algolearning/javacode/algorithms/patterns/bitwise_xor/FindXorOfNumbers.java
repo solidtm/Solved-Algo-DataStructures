@@ -1,4 +1,5 @@
 package com.solid.algolearning.javacode.algorithms.patterns.bitwise_xor;
+
 // Here you are asked, given a range of numbers,
 // we should find the xor of the numbers say from 0 to a
 

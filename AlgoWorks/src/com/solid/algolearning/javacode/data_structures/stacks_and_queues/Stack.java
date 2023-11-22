@@ -19,6 +19,7 @@ public class Stack {
 
     public Stack push(String value){
         Node newNode = new Node(value);
+
         if (this.length == 0){
             System.out.println("Adding " + newNode.value);
             this.topNode = newNode;
@@ -29,6 +30,7 @@ public class Stack {
             this.topNode = newNode;
             this.topNode.next = previousTop;
         }
+
         this.length++;
         return this;
     }

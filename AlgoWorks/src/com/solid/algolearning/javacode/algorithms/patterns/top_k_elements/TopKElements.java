@@ -35,7 +35,8 @@ public class TopKElements {
 
         int[] ans = new int[k];
         for (int i = 0; i < k; i++) {
-            ans[i] = pq.poll()[1];
+            int[] value = pq.poll();
+            if(value != null) ans[i] = value[1];
         }
 
         return ans;

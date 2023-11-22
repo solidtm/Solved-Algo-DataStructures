@@ -10,6 +10,7 @@ public class MagicNumber {
     static int magicNumber(int n){
         int answer = 0;
         int base = 5;
+
         while(n > 0){
             int lastDigit = n & 1; //get the last number
             n = n >> 1;  //ignore the last number

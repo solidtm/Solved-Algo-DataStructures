@@ -6,7 +6,8 @@ public class PowerOf2 {
         System.out.println(isPowerOfTwo(-8));
     }
 
-    static boolean isPowerOfTwo(int n){ //this function fails at having a -ve large numbers find out why (hint = signed and unsigned bits)
+    //this function fails at having a -ve large numbers find out why (hint = signed and unsigned bits)
+    static boolean isPowerOfTwo(int n){
         if(n == 0) return false;
 
        return (n & (n - 1)) == 0;

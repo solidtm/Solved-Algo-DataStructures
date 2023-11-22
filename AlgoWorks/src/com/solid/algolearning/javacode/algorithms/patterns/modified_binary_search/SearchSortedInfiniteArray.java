@@ -5,7 +5,8 @@ package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_sear
 //
 //        Since it is not possible to define an array with infinite (unknown) size,
 //        you will be provided with an interface ArrayReader to read elements of the array.
-//        ArrayReader.get(index) will return the number at index; if the array’s size is smaller than the index, it will return Integer.MAX_VALUE.
+//        ArrayReader.get(index) will return the number at index; if the array’s size is smaller than the index,
+//        it will return Integer.MAX_VALUE.
 //
 //        Example 1:
 //
@@ -49,8 +50,7 @@ public class SearchSortedInfiniteArray {
         }
 
         public int get(int index) {
-            if (index >= arr.length)
-                return Integer.MAX_VALUE;
+            if (index >= arr.length) return Integer.MAX_VALUE;
             return arr[index];
         }
     }
@@ -69,7 +69,8 @@ public class SearchSortedInfiniteArray {
     private static int binarySearch(ArrayReader reader, int key, int start, int end) {
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (key < reader.get(mid)) {
+
+            if (key < reader.get(mid)){
                 end = mid - 1;
             } else if (key > reader.get(mid)) {
                 start = mid + 1;

@@ -3,7 +3,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.bitwise_xor;
 //This is leetcode question number: 832
 public class FlipImage {
     public int[][] flipAndInvertImage(int[][] image) {
-        //We can first reverse the array adn then take the 1s compliment and that si totally okay.
+        //We can first reverse the array and then take the 1s compliment and that is totally okay.
 
         //But also we can apply bitwise xor in the problem thus:
         //if we xor any number with 1, we get the inverse of that number

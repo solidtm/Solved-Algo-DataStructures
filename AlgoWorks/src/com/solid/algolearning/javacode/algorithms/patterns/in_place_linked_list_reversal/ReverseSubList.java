@@ -8,7 +8,7 @@ public class ReverseSubList{
         // check if head and head.next is null and return null;
         // while the linkedlist still has values, check if the current node value
         // is equal to p if it is, call reverse method to reverse the linkedList
-        // while the value of the node during reversal is not 4.
+        // while the value of the node during reversal is not q.
 
         if(head == null || head.next == null) return null;
 
@@ -23,8 +23,8 @@ public class ReverseSubList{
         ListNode lastNodeFirstPart = prev; //first part of the list
         ListNode lastNodeSubList = curr;   // last part end of the reversed list will be curr
 
-//        reverse the sublist until we reach q
-        ListNode next = null;
+//     reverse the sublist until we reach q
+        ListNode next;
         while(!(curr.value > q)){
             next = curr.next;
             curr.next = prev;
@@ -33,9 +33,8 @@ public class ReverseSubList{
         }
 
         // connect first part a mid part
-        if(lastNodeFirstPart != null){
-            lastNodeFirstPart.next = prev;
-        }else head = prev;
+        if(lastNodeFirstPart != null) lastNodeFirstPart.next = prev;
+        else head = prev;
 
 //        connect the  last part
         lastNodeSubList.next = curr;

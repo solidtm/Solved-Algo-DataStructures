@@ -32,7 +32,7 @@ public class NKnightsProblem {
            board[row][col] = false;  //backtrack
        }
 
-       placeKnights(board, row, col + 1, knights); //recursively check the next columns for remining knights
+       placeKnights(board, row, col + 1, knights); //recursively check the next columns for remaining knights
     }
 
 

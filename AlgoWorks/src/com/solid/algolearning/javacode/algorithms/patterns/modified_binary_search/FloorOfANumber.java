@@ -1,4 +1,5 @@
 package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_search;
+
 // Given an array of numbers sorted in ascending order, find the floor of a given number ‘key’.
 //        The floor of the ‘key’ will be the biggest element in the given array smaller than or equal to the ‘key’
 //
@@ -32,8 +33,10 @@ public class FloorOfANumber {
             return -1;
 
         int start = 0, end = arr.length - 1;
+
         while (start <= end) {
             int mid = start + (end - start) / 2;
+
             if (key < arr[mid]) {
                 end = mid - 1;
             } else if (key > arr[mid]) {

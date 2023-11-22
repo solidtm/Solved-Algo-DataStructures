@@ -16,18 +16,16 @@ public class FindCycleStart {
         ListNode fast = head;
         ListNode slow = head;
         ListNode temp = head;
-        if(head == null)
-            return null;
-        while(fast.next != null && fast.next.next != null)
-        {
+
+        if(head == null) return null;
+        while(fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if(slow == fast)
-            {
-                while(temp != slow)
-                {
-                    temp=temp.next;
-                    slow=slow.next;
+
+            if(slow == fast) {
+                while(temp != slow) {
+                    temp = temp.next;
+                    slow = slow.next;
                 }
                 return temp;
             }

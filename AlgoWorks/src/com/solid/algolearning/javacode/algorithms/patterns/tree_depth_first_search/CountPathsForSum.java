@@ -26,8 +26,7 @@ public class CountPathsForSum {
     }
 
     private static int countPathsRecursive(TreeNode currentNode, int S, List<Integer> currentPath) {
-        if (currentNode == null)
-            return 0;
+        if (currentNode == null) return 0;
 
         // add the current node to the path
         currentPath.add(currentNode.val);

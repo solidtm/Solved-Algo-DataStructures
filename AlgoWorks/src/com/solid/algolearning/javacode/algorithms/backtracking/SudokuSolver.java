@@ -18,7 +18,6 @@ public class SudokuSolver {
        }else{
            System.out.println("Cannot solve");
        }
-
     }
 
     static boolean sudokuSolver(int[][] board){
@@ -71,8 +70,6 @@ public class SudokuSolver {
             System.out.println();
         }
     }
-
-
 
     static boolean isSafe(int[][] board, int row, int col, int num){
         //check the row

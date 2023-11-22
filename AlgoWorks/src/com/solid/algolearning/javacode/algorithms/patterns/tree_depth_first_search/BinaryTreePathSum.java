@@ -24,8 +24,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.tree_depth_first_sea
 
 public class BinaryTreePathSum {
     public static boolean hasPath(TreeNode root, int sum) {
-        if (root == null)
-            return false;
+        if (root == null) return false;
 
         // if the current node is a leaf and its value is equal to the sum, we've found a path
         if (root.val == sum && root.left == null && root.right == null)

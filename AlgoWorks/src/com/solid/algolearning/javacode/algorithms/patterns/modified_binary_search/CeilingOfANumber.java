@@ -48,8 +48,10 @@ public class CeilingOfANumber {
             return -1;
 
         int start = 0, end = arr.length - 1;
+
         while (start <= end) {
             int mid = start + (end - start) / 2;
+
             if (key < arr[mid]) {
                 end = mid - 1;
             } else if (key > arr[mid]) {
@@ -72,10 +74,10 @@ public class CeilingOfANumber {
 
 //    Time complexity#
 //    Since we are reducing the search range by half at every step,
-//    this means that the time complexity of our algorithm will be O(logN)O(logN)
+//    this means that the time complexity of our algorithm will be O(logN)
 //    where ‘N’ is the total elements in the given array.
 //
 //    Space complexity#
-//    The algorithm runs in constant space O(1)O(1).
+//    The algorithm runs in constant space O(1).
 
 }

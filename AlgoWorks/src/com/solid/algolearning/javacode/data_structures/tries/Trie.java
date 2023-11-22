@@ -19,24 +19,21 @@ public class Trie {
     }
 
     //Function to insert a key in the Trie
-    public void insert(String key)
-    {
-        if(key == null) //Null keys are not allowed
-        {
+    public void insert(String key) {
+        if(key == null){ //Null keys are not allowed
             System.out.println("Null Key can not be Inserted!");
             return;
         }
+
         key = key.toLowerCase(); //Keys are stored in lowercase
         TrieNode currentNode = this.root;
-        int index = 0; //to store character index
+        int index; //to store character index
 
         //Iterate the Trie with given character index,
         //If it is null, then simply create a TrieNode and go down a level
-        for (int level = 0; level < key.length(); level++)
-        {
+        for (int level = 0; level < key.length(); level++) {
             index = getIndex(key.charAt(level));
-            if(currentNode.children[index] == null)
-            {
+            if(currentNode.children[index] == null) {
                 currentNode.children[index] = new TrieNode();
             }
             currentNode = currentNode.children[index];
@@ -47,12 +44,11 @@ public class Trie {
 
     //Function to search given key in Trie
     public boolean search(String key) {
-
         if (key == null) return false; //Null Key
 
         key = key.toLowerCase();
         TrieNode currentNode = this.root;
-        int index = 0;
+        int index;
 
         //Iterate the Trie with given character index,
         //If it is null at any point then we stop and return false
@@ -65,47 +61,42 @@ public class Trie {
             currentNode = currentNode.children[index];
         }
 
-
         return currentNode.isEndWord;
     }
 
     //Helper Function to return true if currentNode does not have any children
     private boolean hasNoChildren(TrieNode currentNode){
         for (int i = 0; i < currentNode.children.length; i++){
-            if ((currentNode.children[i]) != null)
-                return false;
+            if ((currentNode.children[i]) != null) return false;
         }
+
         return true;
     }
 
     //Recursive function to delete given key
-    private boolean deleteHelper(String key, TrieNode currentNode, int length, int level)
-    {
-        boolean deletedSelf = false;
+    private boolean deleteHelper(String key, TrieNode currentNode, int length, int level) {
+        boolean deletedSelf;
 
         if (currentNode == null){
             System.out.println("Key does not exist");
-            return deletedSelf;
+            return false;
         }
 
         //Base Case: If we have reached at the node which points to the alphabet at the end of the key.
         if (level == length){
             //If there are no nodes ahead of this node in this path
-            //Then we can delete this node
-            if (hasNoChildren(currentNode)){
-                currentNode = null;
+            //Then we can delete this node                           012345
+            if (hasNoChildren(currentNode)){   //   apples    =>     apple
                 deletedSelf = true;
             }
             //If there are nodes ahead of currentNode in this path
             //Then we cannot delete currentNode. We simply unmark this as leaf
-            else
-            {
+            else {
                 currentNode.unMarkAsLeaf();
                 deletedSelf = false;
             }
         }
-        else
-        {
+        else {
             TrieNode childNode = currentNode.children[getIndex(key.charAt(level))];
             boolean childDeleted = deleteHelper(key, childNode, length, level + 1);
             if (childDeleted)

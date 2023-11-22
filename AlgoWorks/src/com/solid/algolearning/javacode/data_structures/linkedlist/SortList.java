@@ -1,9 +1,7 @@
 package com.solid.algolearning.javacode.data_structures.linkedlist;
 
 public class SortList {
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {}
 
     public ListNode sortList(ListNode head) {
         //we will use merge sort.
@@ -31,10 +29,8 @@ public class SortList {
         return slow;
     }
 
-
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode head = merge(list1, list2);
-        return head;
+        return merge(list1, list2);
     }
 
     public ListNode merge(ListNode node1, ListNode node2){

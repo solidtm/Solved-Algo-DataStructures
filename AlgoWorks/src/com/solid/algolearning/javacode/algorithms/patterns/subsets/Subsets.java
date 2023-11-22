@@ -4,7 +4,6 @@ import java.util.*;
 //        Given a set with distinct elements, find all of its distinct subsets.
 //
 //        Example 1:
-//
 //        Input: [1, 3]
 //        Output: [], [1], [3], [1,3]
 //        Example 2:
@@ -20,8 +19,8 @@ public class Subsets {
 
     public static List<List<Integer>> getSubsets(int[] nums){
         List<List<Integer>> subsets = new ArrayList<>();
-
         subsets.add(new ArrayList<>());
+
         for(int currNum : nums){
             int size = subsets.size();
 
@@ -31,6 +30,7 @@ public class Subsets {
                 subsets.add(set);
             }
         }
+        subsets.remove(0);
         return subsets;
     }
 }

@@ -41,8 +41,7 @@ public class SearchBitonicArray {
     public static int search(int[] arr, int key) {
         int maxIndex = findMax(arr);
         int keyIndex = binarySearch(arr, key, 0, maxIndex);
-        if (keyIndex != -1)
-            return keyIndex;
+        if (keyIndex != -1) return keyIndex;
         return binarySearch(arr, key, maxIndex + 1, arr.length - 1);
     }
 
@@ -51,6 +50,7 @@ public class SearchBitonicArray {
         int start = 0, end = arr.length - 1;
         while (start < end) {
             int mid = start + (end - start) / 2;
+
             if (arr[mid] > arr[mid + 1]) {
                 end = mid;
             } else {
@@ -67,8 +67,7 @@ public class SearchBitonicArray {
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (key == arr[mid])
-                return mid;
+            if (key == arr[mid]) return mid;
 
             if (arr[start] < arr[end]) { // ascending order
                 if (key < arr[mid]) {

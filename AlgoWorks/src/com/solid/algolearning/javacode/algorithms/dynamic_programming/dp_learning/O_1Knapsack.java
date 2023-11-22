@@ -25,8 +25,7 @@ public class O_1Knapsack {
                                   int currentIndex) {
 
         // base checks
-        if (capacity <= 0 || currentIndex >= profits.length)
-            return 0;
+        if (capacity <= 0 || currentIndex >= profits.length) return 0;
 
         // if we have already solved a similar problem, return the result from memory
         if(dp[currentIndex][capacity] != null)
@@ -35,7 +34,7 @@ public class O_1Knapsack {
         // recursive call after choosing the element at the currentIndex
         // if the weight of the element at currentIndex exceeds the capacity, we shouldn't process this
         int profit1 = 0;
-        if( weights[currentIndex] <= capacity )
+        if(weights[currentIndex] <= capacity)
             profit1 = profits[currentIndex] + knapsackRecursive(dp, profits, weights,
                     capacity - weights[currentIndex], currentIndex + 1);
 

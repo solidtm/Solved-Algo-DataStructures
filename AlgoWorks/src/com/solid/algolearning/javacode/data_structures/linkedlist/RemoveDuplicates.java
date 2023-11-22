@@ -18,7 +18,7 @@ public class RemoveDuplicates {
                 node = node.next;
             }
         }
-        node.next = null;
+
         return head;
     }
 
@@ -27,15 +27,13 @@ public class RemoveDuplicates {
         ListNode fast = head;
         ListNode slow = head;
 
-        if(head == null)
-            return false;
+        if(head == null) return false;
 
         while(fast != null && fast.next != null)
         {
             fast = fast.next.next;
             slow = slow.next;
-            if(slow == fast)
-            {
+            if(slow == fast) {
                 return true;
             }
         }
@@ -73,24 +71,21 @@ public class RemoveDuplicates {
         ListNode temp = head;
         int length = 0;
 
-        if(head == null)
-            return 0;
+        if(head == null) return 0;
 
-        while(fast != null && fast.next != null)
-        {
+        while(fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if(slow == fast)
-            {
-                while(temp != slow)
-                {
+            if(slow == fast) {
+                while(temp != slow) {
                     length++;
-                    temp=temp.next;
-                    slow=slow.next;
+                    temp = temp.next;
+                    slow = slow.next;
                 }
                 return length;
             }
         }
+
         return 0;
     }
 }

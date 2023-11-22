@@ -31,6 +31,7 @@ public class NoRepeatingSubString {
                 // and if 'windowStart' is already ahead of the last index of 'rightChar', we'll keep 'windowStart'
                 windowStart = Math.max(windowStart, charIndexMap.get(rightChar) + 1);
             }
+
             charIndexMap.put(rightChar, windowEnd); // insert the 'rightChar' into the map
             maxLength = Math.max(maxLength, windowEnd - windowStart + 1); // remember the maximum length so far
         }

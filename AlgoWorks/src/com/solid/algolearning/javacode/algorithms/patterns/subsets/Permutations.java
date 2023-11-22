@@ -22,10 +22,8 @@ public class Permutations {
                     List<Integer> newPermutation = new ArrayList<>(oldPermutations);
                     newPermutation.add(j, currNum);
 
-                    if (newPermutation.size() == nums.length)
-                        result.add(newPermutation);
-                    else
-                        permutations.add(newPermutation);
+                    if (newPermutation.size() == nums.length) result.add(newPermutation);
+                    else permutations.add(newPermutation);
                 }
             }
         }

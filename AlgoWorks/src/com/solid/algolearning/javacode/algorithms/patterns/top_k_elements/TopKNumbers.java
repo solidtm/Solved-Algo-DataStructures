@@ -50,6 +50,8 @@ package com.solid.algolearning.javacode.algorithms.patterns.top_k_elements;
 //
 //        Here is the visual representation of our algorithm:
 
+import com.solid.algolearning.javacode.algorithms.patterns.tree_breadth_first_search.TreeNode;
+
 import java.util.*;
 public class TopKNumbers {
     public static List<Integer> findKLargestNumbers(int[] nums, int k) {

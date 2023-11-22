@@ -10,7 +10,8 @@ public class MiddleOfLinkedList {
         }
     }
 
-    //My brute force approach gets the length of the linkedList, calculates its middle and then loops to that middle and returns that value
+    //My brute force approach gets the length of the linkedList, calculates its middle and then loops to
+    // that middle and returns that value
     public static Node findMiddleBruteForce(Node head) {
         Node currentNode = head;
 
@@ -28,6 +29,7 @@ public class MiddleOfLinkedList {
     public static int findLength(Node head){
         Node currentNode = head;
         int listLength = 0;
+
         while(currentNode.next != null){
             currentNode = currentNode.next;
             listLength++;
@@ -39,6 +41,7 @@ public class MiddleOfLinkedList {
     public static Node findMiddle(Node head) {
         Node slow = head;
         Node fast = head;
+
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

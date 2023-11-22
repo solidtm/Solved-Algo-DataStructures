@@ -19,6 +19,7 @@ public class SubsetWithDuplicates {
             // if current and the previous elements are same, create new subsets only from the subsets
             // added in the previous step
             if (i > 0 && nums[i] == nums[i - 1]) startIndex = endIndex + 1;
+
             endIndex = subsets.size() - 1;
 
             for (int j = startIndex; j <= endIndex; j++) {
@@ -28,6 +29,8 @@ public class SubsetWithDuplicates {
                 subsets.add(set);
             }
         }
+
+        subsets.remove(0);
         return subsets;
     }
 }

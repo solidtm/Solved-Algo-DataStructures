@@ -20,6 +20,7 @@ public class SquareSortedArray {
         while (left <= right) {
             int leftSquare = arr[left] * arr[left];
             int rightSquare = arr[right] * arr[right];
+
             if (leftSquare > rightSquare) {
                 squares[highestSquareIdx--] = leftSquare;
                 left++;

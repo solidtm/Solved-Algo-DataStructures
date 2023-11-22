@@ -22,7 +22,8 @@ package com.solid.algolearning.javacode.algorithms.patterns.bitwise_xor;
 //        numbers will cancel each other because all of them appeared twice. Let’s call this XOR n1xn2.
 //        Now that we have XOR of num1 and num2, how can we find these two single numbers?
 //
-//        As we know that num1 and num2 are two different numbers, therefore, they should have at least one bit different between them.
+//        As we know that num1 and num2 are two different numbers, therefore,
+//        they should have at least one bit different between them.
 //        If a bit in n1xn2 is ‘1’, this means that num1 and num2 have different bits in that place,
 //        as we know that we can get ‘1’ only when we do XOR of two different bits, i.e.,
 //

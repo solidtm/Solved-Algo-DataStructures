@@ -25,3 +25,27 @@ public class IsOdd {
         return (number & 1) == 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

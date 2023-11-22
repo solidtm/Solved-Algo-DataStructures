@@ -13,7 +13,7 @@ public class InsertInterval {
             mergedIntervals.add(intervals.get(i++));
         }
 
-        // check for overla in intervals that doesn't satisfy the above condition
+        // check for overlap in intervals that doesn't satisfy the above condition
         while(i < intervals.size() && intervals.get(i).start <= newInterval.end){
             newInterval.start = Math.min(intervals.get(i).start, newInterval.start);
             newInterval.end = Math.min(intervals.get(i).end, newInterval.end);

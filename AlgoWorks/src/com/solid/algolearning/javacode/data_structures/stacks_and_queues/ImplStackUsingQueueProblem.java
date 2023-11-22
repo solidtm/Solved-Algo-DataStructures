@@ -34,6 +34,7 @@ public class ImplStackUsingQueueProblem {
 //            System.out.println("q1 or q2 may be empty: " + q1.isEmpty());
             return 0;
         }
+
         while(q1.size() > 1){
 //            System.out.println("Adding " + q1.poll() + " to q2");
             q2.add(q1.poll()); //q1 = []; q2 = [1, 2, 3]

@@ -9,15 +9,14 @@ import java.util.List;
 public class NQueensProblem {
 
     public static void main(String[] args) {
-//        int n = 4;
-//        boolean[][] board = new boolean[n][n];
-//        System.out.println(placeQueens(board, 0));
+        int n = 3;
+        boolean[][] board = new boolean[n][n];
+        System.out.println(placeQueens(board, 0));
 
-        List<List<String>>  res = solveNQueens(5);
-        for (List<String> re : res) {
-            System.out.println(re);
-        }
-
+//        List<List<String>>  res = solveNQueens(5);
+//        for (List<String> re : res) {
+//            System.out.println(re);
+//        }
     }
 
     static  int placeQueens(boolean[][] board, int row ){ //return the number of ways we can place queens, true means the queen is placed, we are starting col from 0 all the time no neeed to pass it in paaram
@@ -40,6 +39,7 @@ public class NQueensProblem {
 
         return count;
     }
+
 
     //method to check if it is safe to place a queen in a specific column in a row
     //this method checks for the upper rows of the column it is sitting in to see
@@ -165,6 +165,15 @@ public class NQueensProblem {
         }
 
         return true;
+    }
+
+    public static void printValues(int num){
+        int i = 0;
+        int[] arr = new int[num];
+
+        while(i < 10){//[10,9,8,7,6,5,4,3,2]
+            arr[i++] = num;
+        }
     }
 }
 

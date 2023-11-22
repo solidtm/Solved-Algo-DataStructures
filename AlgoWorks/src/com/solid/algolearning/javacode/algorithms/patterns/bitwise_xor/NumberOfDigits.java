@@ -5,6 +5,7 @@ public class NumberOfDigits {
        int n = 128;
        int base = 2;
 
+        System.out.println(Integer.toBinaryString(n));
         System.out.println(numberOfDigits(n, base));
         System.out.println(Math.pow(2, 7));
     }

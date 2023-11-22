@@ -1,7 +1,10 @@
 package com.solid.algolearning.javacode.algorithms.patterns.fast_slow_pointers;
 
 //Problem Statement#
-//        Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. Instead, they will be stuck in a cycle of numbers which does not include ‘1’.
+//        Any number will be called a happy number if, after repeatedly replacing it with a number equal
+//        to the sum of the square of all of its digits, leads us to number ‘1’.
+//        All other (not-happy) numbers will never reach ‘1’. Instead, they will be stuck in a cycle of numbers
+//        which does not include ‘1’.
 //
 //        Example 1:
 //
@@ -20,6 +23,7 @@ public class HappyNumber {
         int slow = num, fast = num;
         do {
             slow = findSquareSum(slow); // move one step
+            System.out.println(slow);
             fast = findSquareSum(findSquareSum(fast)); // move two steps
         } while (slow != fast); // found the cycle
 
@@ -28,6 +32,7 @@ public class HappyNumber {
 
     private static int findSquareSum(int num) {
         int sum = 0, digit;
+
         while (num > 0) {
             digit = num % 10;
             sum += digit * digit;

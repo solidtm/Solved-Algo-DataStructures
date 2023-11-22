@@ -13,6 +13,7 @@ public class StackUsingArrayList {
         if (array.size() == 0){
             return null;
         }
+
         return this.array.get(array.size() - 1);
     }
 
@@ -22,7 +23,7 @@ public class StackUsingArrayList {
     }
 
     public StackUsingArrayList pop(){
-//        If there is nothing in the stack, return null
+//      If there is nothing in the stack, return null
         if (this.array.isEmpty()){
             return null;
         }

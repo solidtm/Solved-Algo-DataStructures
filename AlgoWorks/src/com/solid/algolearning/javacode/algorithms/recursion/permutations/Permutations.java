@@ -24,7 +24,6 @@ public class Permutations {
     }
 
     static void permutate(char[] str, int index) {
-
         // base case
         if (index == str.length) {
             System.out.println(str);

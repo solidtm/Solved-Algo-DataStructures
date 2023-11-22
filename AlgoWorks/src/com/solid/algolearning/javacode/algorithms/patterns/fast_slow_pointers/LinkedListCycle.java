@@ -6,7 +6,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.fast_slow_pointers;
 public class LinkedListCycle {
 
     static class ListNode {
-        int value = 0;
+        int value;
         ListNode next;
 
         ListNode(int value) {
@@ -17,11 +17,11 @@ public class LinkedListCycle {
     public static boolean hasCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
+
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if (slow == fast)
-                return true; // found the cycle
+            if (slow == fast) return true; // found the cycle
         }
         return false;
     }

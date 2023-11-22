@@ -1,9 +1,11 @@
 package com.solid.algolearning.javacode.algorithms.patterns.in_place_linked_list_reversal;
+
 //Rotate a LinkedList (medium)#
 //        Given the head of a Singly LinkedList and a number ‘k’, rotate the LinkedList to the right by ‘k’ nodes.
 
 //Solution#
-//        Another way of defining the rotation is to take the sub-list of ‘k’ ending nodes of the LinkedList and connect them to the beginning. Other than that we have to do three more things:
+//        Another way of defining the rotation is to take the sub-list of ‘k’ ending nodes of the LinkedList
+//        and connect them to the beginning. Other than that we have to do three more things:
 //
 //        Connect the last node of the LinkedList to the head, because the list will have a different tail after the rotation.
 //        The new head of the LinkedList will be the node at the beginning of the sublist.
@@ -19,6 +21,7 @@ public class RotateLinkedList {
         // find the length and the last node of the list
         ListNode lastNode = head;
         int listLength = 1;
+
         while (lastNode.next != null) {
             lastNode = lastNode.next;
             listLength++;
@@ -29,12 +32,11 @@ public class RotateLinkedList {
         int skipLength = listLength - rotations;
         ListNode lastNodeOfRotatedList = head;
 
-        for (int i = 0; i < skipLength - 1; i++)
-            lastNodeOfRotatedList = lastNodeOfRotatedList.next;
+        for (int i = 0; i < skipLength - 1; i++) lastNodeOfRotatedList = lastNodeOfRotatedList.next;
 
         // 'lastNodeOfRotatedList.next' is pointing to the sub-list of 'k' ending nodes
         head = lastNodeOfRotatedList.next;
-        lastNodeOfRotatedList.next = null;
+        lastNodeOfRotatedList.next = null;   //1 2 3 4 5 6
 
         return head;
     }

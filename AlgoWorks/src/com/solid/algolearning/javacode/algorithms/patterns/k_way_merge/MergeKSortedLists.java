@@ -16,14 +16,14 @@ public class MergeKSortedLists {
 
         // put the root of each list in the min heap
         for (ListNode root : lists)
-            if (root != null)
-                minHeap.add(root);
+            if (root != null) minHeap.add(root);
 
         // take the smallest (top) element form the min-heap and add it to the result;
         // if the top element has a next element add it to the heap
         ListNode resultHead = null, resultTail = null;
         while (!minHeap.isEmpty()) {
             ListNode node = minHeap.poll();
+
             if (resultHead == null) {
                 resultHead = resultTail = node;
             } else {

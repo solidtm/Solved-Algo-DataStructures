@@ -16,14 +16,14 @@ public class Power {
         //when n is even
         // 2^10 = (2*2)^5
         // x^n = (x*x)^(n/2)
-        else if(n%2 == 0){
-            return myPow(x*x, n/2);
+        else if(n % 2 == 0){
+            return myPow(x * x, n / 2);
         }
 
         //when n is odd
         // 4^5 = 4 * 4^4
         // x^n = x * x^(n-1)
-        else if(n%2 == 1){
+        else if(n % 2 == 1){
             return x * myPow(x, n-1);
         }
 

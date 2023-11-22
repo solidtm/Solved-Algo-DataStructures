@@ -42,7 +42,7 @@ public class FibonacciNumbers {
         if (n == 0) return 0;
         int[] dp = new int[n + 1];
 
-        //base acases
+        //base cases
         dp[0] = 0;
         dp[1] = 1;
 

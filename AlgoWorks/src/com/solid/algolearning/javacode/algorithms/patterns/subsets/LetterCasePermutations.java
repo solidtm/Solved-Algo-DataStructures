@@ -15,11 +15,14 @@ import java.util.*;
 
 public class LetterCasePermutations {
     public static void main(String[] args) {
-        List<String> result = findLetterCaseStringPermutations("ad52");
-        System.out.println(" String permutations are: " + result);
+//        List<String> result = findLetterCaseStringPermutations("ad52");
+//        System.out.println(" String permutations are: " + result);
+//
+//        result = findLetterCaseStringPermutations("ab7c");
+//        System.out.println(" String permutations are: " + result);
 
-        result = findLetterCaseStringPermutations("ab7c");
-        System.out.println(" String permutations are: " + result);
+        letterCasePermutationRec(0, new StringBuilder(), "ad52");
+        System.out.println(res);
     }
 
     public static List<String> findLetterCaseStringPermutations(String str) {
@@ -44,5 +47,35 @@ public class LetterCasePermutations {
             }
         }
         return permutations;
+    }
+
+    static ArrayList<String> res = new ArrayList<>();
+    public static void letterCasePermutationRec(int index, StringBuilder s, String string) {
+        if (index == string.length()) {
+            res.add(s.toString());
+            return;
+        }
+
+
+
+        for (int i = index; i < s.length(); i++) {
+            if (Character.isUpperCase(s.charAt(i))) {
+                char ch = Character.toLowerCase(s.charAt(i));
+                s.setCharAt(i, ch);
+            } else {
+                char ch = Character.toUpperCase(s.charAt(i));
+                s.setCharAt(i, ch);
+            }
+
+            letterCasePermutationRec(index + 1, s, string);
+
+            if (Character.isUpperCase(s.charAt(i))) {
+                char ch = Character.toLowerCase(s.charAt(i));
+                s.setCharAt(i, ch);
+            } else {
+                char ch = Character.toUpperCase(s.charAt(i));
+                s.setCharAt(i, ch);
+            }
+        }
     }
 }

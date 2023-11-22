@@ -8,7 +8,7 @@ package com.solid.algolearning.javacode.algorithms.patterns.in_place_linked_list
 public class ReverseFirstKElements {
    static ListNode reverseFirstKElem(ListNode head, int k){
        int p = 1;
-       if(head == null || head.next == null) return null;
+       if(head == null || head.next == null) return head;
 
        ListNode curr = head;
        ListNode prev = null;
@@ -21,8 +21,8 @@ public class ReverseFirstKElements {
        ListNode lastNodeFirstPart = prev; //first part of the list
        ListNode lastNodeSubList = curr;   // last part end of the reversed list will be curr
 
-//        reverse the sublist until we reach q
-       ListNode next = null;
+//     reverse the sublist until we reach q
+       ListNode next;
        while(!(curr.value > k)){
            next = curr.next;
            curr.next = prev;
@@ -30,12 +30,12 @@ public class ReverseFirstKElements {
            curr = next;
        }
 
-       // connect first part a last part
+//     connect first part a last part
        if(lastNodeFirstPart != null){
            lastNodeFirstPart.next = prev;
        }else head = prev;
 
-//        connect the  last part
+//     connect the  last part
        lastNodeSubList.next = curr;
 
        return head;

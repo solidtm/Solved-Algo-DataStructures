@@ -28,9 +28,9 @@ public class LeftViewOfBT {
 
             for (int i = 0; i < levelSize; i++) {
                 TreeNode currentNode = queue.poll();
-                if (i == 0)      //if this is the first node in the level, add it to the result list
+                if (i == 0) {     //if this is the first node in the level, add it to the result list
                     result.add(currentNode);
-
+                }
                 // insert the children of current node in the queue
                 if (currentNode.left != null)
                     queue.offer(currentNode.left);

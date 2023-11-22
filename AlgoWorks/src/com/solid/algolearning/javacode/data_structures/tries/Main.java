@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
         // Input keys (use only 'a' through 'z' and lower case)
-        String[] keys = {"the", "a", "there", "answer", "any",
-                "by", "bye", "their","abc"};
+        String[] keys = {"a", "app", "ball"};
         String[] output = {"Not present in trie", "Present in trie"};
         Trie t = new Trie();
 
@@ -15,37 +14,35 @@ public class Main {
         // Construct trie
 
         int i;
-        for (i = 0; i < keys.length ; i++)
-            t.insert(keys[i]);
+        for (i = 0; i < keys.length ; i++) t.insert(keys[i]);
 
         // Search for different keys and delete if found
-        if(t.search("the"))
+        if(t.search("a"))
         {
-            System.out.println("the --- " + output[1]);
-            t.delete("the");
-            System.out.println("Deleted key \"the\"");
+            System.out.println("a --- " + output[1]);
+            t.delete("a");
+            System.out.println("Deleted key \"a\"");
         }
-        else System.out.println("the --- " + output[0]);
+        else System.out.println("a --- " + output[0]);
 
-        if(t.search("these"))
+        if(t.search("app"))
         {
-            System.out.println("these --- " + output[1]);
-            t.delete("these");
-            System.out.println("Deleted key \"these\"");
+            System.out.println("app --- " + output[1]);
+            t.delete("app");
+            System.out.println("Deleted key \"app\"");
         }
-        else System.out.println("these --- " + output[0]);
+        else System.out.println("app --- " + output[0]);
 
-        if(t.search("abc"))
+        if(t.search("ball"))
         {
-            System.out.println("abc --- " + output[1]);
-            t.delete("abc");
-            System.out.println("Deleted key \"abc\"");
+            System.out.println("ball --- " + output[1]);
+            t.delete("ball");
+            System.out.println("Deleted key \"ball\"");
         }
-        else System.out.println("abc --- " + output[0]);
+        else System.out.println("ball --- " + output[0]);
 
         // check if the string has deleted correctly or still present
-        if(t.search("abc"))
-            System.out.println("abc --- " + output[1]);
+        if(t.search("abc")) System.out.println("abc --- " + output[1]);
         else System.out.println("abc --- " + output[0]);
     }
 }

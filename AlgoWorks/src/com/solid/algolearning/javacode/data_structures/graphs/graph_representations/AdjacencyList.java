@@ -32,6 +32,6 @@ public class AdjacencyList {
         adjacencyList.get(1).add(3);
         adjacencyList.get(3).add(1);
 
-        System.out.println(adjacencyList.toString());
+        System.out.println(adjacencyList);
     }
 }

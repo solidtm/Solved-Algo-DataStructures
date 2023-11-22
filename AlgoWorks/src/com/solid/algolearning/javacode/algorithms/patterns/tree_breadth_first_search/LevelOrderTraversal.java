@@ -58,7 +58,7 @@ public static List<List<Integer>> traverseIterative(TreeNode root) {
                 queue.offer(currentNode.right);
         }
 
-        result.add(currentLevel);   //insert the arralist for that level to the result list.
+        result.add(currentLevel);   //insert the arraylist for that level to the result list.
     }
 
     return result;
@@ -83,7 +83,4 @@ public static List<List<Integer>> traverseIterative(TreeNode root) {
         compute(result, root.left, level + 1);
         compute(result, root.right, level + 1);
     }
-
-
-
 }

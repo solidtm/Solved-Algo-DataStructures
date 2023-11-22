@@ -1,7 +1,8 @@
 package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_search;
 
 //Problem Statement#
-//        Find the maximum value in a given Bitonic array. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing.
+//        Find the maximum value in a given Bitonic array. An array is considered bitonic
+//        if it is monotonically increasing and then monotonically decreasing.
 //        Monotonically increasing or decreasing means that for any index i in the array arr[i] != arr[i+1].
 //
 //        Example 1:
@@ -40,8 +41,10 @@ package com.solid.algolearning.javacode.algorithms.patterns.modified_binary_sear
 public class BotonicArray {
     public static int findMax(int[] arr) {
         int start = 0, end = arr.length - 1;
+
         while (start < end) {
             int mid = start + (end - start) / 2;
+
             if (arr[mid] > arr[mid + 1]) {
                 end = mid;
             } else {

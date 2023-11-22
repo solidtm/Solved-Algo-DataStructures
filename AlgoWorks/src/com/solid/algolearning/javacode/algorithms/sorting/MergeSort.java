@@ -29,7 +29,7 @@ public class MergeSort {
         int leftIndex = 0;
         int rightIndex = 0;
         int k = 0;
-       int[] tempList = new int[left.length + right.length];
+        int[] tempList = new int[left.length + right.length];
 
         while(leftIndex < left.length && rightIndex < right.length){
             if(left[leftIndex] <= right[rightIndex]){
@@ -57,8 +57,6 @@ public class MergeSort {
 
         return tempList;
     }
-
-
 
     public static void mergeSortInPlace(int[] input, int start, int end){
         if(end - start == 1){

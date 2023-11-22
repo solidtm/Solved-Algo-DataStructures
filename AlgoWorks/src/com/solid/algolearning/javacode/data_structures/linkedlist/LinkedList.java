@@ -123,8 +123,6 @@ public class LinkedList {
 
         return val;
     }
-
-
     public ListNode get(int index){   //gets the node at any index.
        ListNode node = head;
 

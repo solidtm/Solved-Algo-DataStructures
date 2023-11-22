@@ -8,9 +8,9 @@ package com.solid.algolearning.javacode.algorithms.patterns.sliding_window;
 // Output: 6
 // Explanation: Replace the '0' at index 5 and 8 to have the longest contiguous subarray of 1s having length 6.
 
-// Example 2:
-// Input: Array=[0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], k=3
-// Output: 9
+// Example 2:       s
+// Input: Array=[0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], k=3 , m = 4
+// Output: 9                          e
 // Explanation: Replace the '0' at index 6, 9, and 10 to have the longest contiguous subarray of 1s having length 9.
 import java.util.*;
 public class LongestSubArrayWithOnes {
@@ -18,7 +18,6 @@ public class LongestSubArrayWithOnes {
     public static int findLength(int[] arr, int k) {
         int windowStart = 0, maxLength = 0, maxRepeatingOnes = 0;
         int windowEnd;
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
 
         for(windowEnd = 0; windowEnd < arr.length; windowEnd++){
             if(arr[windowEnd] == 1){

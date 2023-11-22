@@ -3,7 +3,6 @@ package com.solid.algolearning.javacode.algorithms.patterns.merge_intervals;
 //        Problem 1: Given a set of intervals, find out if any two intervals overlap.
 //
 //        Example:
-//
 //        Intervals: [[1,4], [2,5], [7,9]]
 //        Output: true
 //        Explanation: Intervals [1,4] and [2,5] overlap

@@ -3,16 +3,18 @@ package com.solid.algolearning.javacode.algorithms.patterns.sliding_window;
 import java.util.*;
 public class FruitsIntoBasket {
 
+//Problem Statement#
+//Given an array of characters where each character represents a fruit tree, you are given two baskets,
+//and your goal is to put maximum number of fruits in each basket.
+//The only restriction is that each basket can have only one type of fruit.
 
-    //Problem Statement#
-//Given an array of characters where each character represents a fruit tree, you are given two baskets, and your goal is to put maximum number of fruits in each basket. The only restriction is that each basket can have only one type of fruit.
-
-//You can start with any tree, but you can’t skip a tree once you have started. You will pick one fruit from each tree until you cannot, i.e., you will stop when you have to pick from a third fruit type.
+//You can start with any tree, but you can’t skip a tree once you have started. You will pick one fruit from each tree until you cannot, i.e.,
+//you will stop when you have to pick from a third fruit type.
 
 //Write a function to return the maximum number of fruits in both baskets.
 
-//Example 1:
-//Input: Fruit=['A', 'B', 'C', 'A', 'C']
+// Example 1:
+// Input: Fruit=['A', 'B', 'C', 'A', 'C']
 // Output: 3
 // Explanation: We can put 2 'C' in one basket and one 'A' in the other from the subarray ['C', 'A', 'C']
 
@@ -23,12 +25,8 @@ public class FruitsIntoBasket {
 // This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
 
 
-
-
         public static int findLength(char[] arr) {
-            if(arr.length == 0 || arr.length == 1){
-                return 0;
-            }
+            if(arr.length == 0 || arr.length == 1){return 0;}
 
             int windowStart = 0, maxLength = 0;
             int windowEnd;
@@ -45,6 +43,7 @@ public class FruitsIntoBasket {
                     if(frequencyMap.get(leftChar) == 0){
                         frequencyMap.remove(leftChar);
                     }
+
                     windowStart++;
                 }
 

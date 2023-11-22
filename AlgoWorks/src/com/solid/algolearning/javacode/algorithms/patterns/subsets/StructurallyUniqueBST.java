@@ -24,7 +24,7 @@ class TreeNode {
     }
 }
 
-public class StructurallyuniqueBST {
+public class StructurallyUniqueBST {
     public static void main(String[] args) {
         List<TreeNode> result = findUniqueTrees(2);
         System.out.print("Total trees: " + result.size());

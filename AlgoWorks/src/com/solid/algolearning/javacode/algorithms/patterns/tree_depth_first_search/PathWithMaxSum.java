@@ -16,6 +16,7 @@ public class PathWithMaxSum {
 
     public static int findMaximumPathSum(TreeNode root) {
         globalMaximumSum = Integer.MIN_VALUE;
+
         findMaximumPathSumRecursive(root);
         return globalMaximumSum;
     }

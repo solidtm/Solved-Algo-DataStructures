@@ -42,8 +42,7 @@ public class SearchInRotatedArray {
         int start = 0, end = arr.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (arr[mid] == key)
-                return mid;
+            if (arr[mid] == key) return mid;
 
             if (arr[start] <= arr[mid]) { // left side is sorted in ascending order
                 if (key >= arr[start] && key < arr[mid]) {

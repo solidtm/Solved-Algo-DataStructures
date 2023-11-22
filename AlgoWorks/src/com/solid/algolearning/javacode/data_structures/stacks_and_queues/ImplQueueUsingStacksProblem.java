@@ -68,8 +68,6 @@ public class ImplQueueUsingStacksProblem {
         System.out.println(myQueue.pop());
         System.out.println("=================");
         System.out.println(myQueue.empty());
-
-
     }
 
 }

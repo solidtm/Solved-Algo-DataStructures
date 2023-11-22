@@ -16,6 +16,7 @@ public class AllRootToLeafPaths {
     public static List<List<Integer>> findPaths(TreeNode root) {
         List<List<Integer>> allPaths = new ArrayList<>();
         List<Integer> currentPath = new ArrayList<Integer>();
+
         findAllTreePaths(allPaths, currentPath, root);
         return allPaths;
     }

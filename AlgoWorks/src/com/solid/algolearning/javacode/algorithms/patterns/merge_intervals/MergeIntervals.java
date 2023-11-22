@@ -2,10 +2,10 @@ package com.solid.algolearning.javacode.algorithms.patterns.merge_intervals;
 import java.util.*;
 
 //Problem Statement #
-//        Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
+//        Given a list of intervals, merge all the overlapping intervals to produce a list that has only
+//        mutually exclusive intervals.
 //
 //        Example 1:
-//
 //        Intervals: [[1,4], [2,5], [7,9]]
 //        Output: [[1,5], [7,9]]
 //        Explanation: Since the first two intervals [1,4] and [2,5] overlap, we merged them into
@@ -48,6 +48,7 @@ public class MergeIntervals {
             this.start = start;
             this.end = end;
         }
+    }
 
 
     public static void main(String[] args) {
@@ -78,5 +79,4 @@ public class MergeIntervals {
             System.out.print("[" + interval.start + "," + interval.end + "] ");
         System.out.println();
     }
-  }
 }
