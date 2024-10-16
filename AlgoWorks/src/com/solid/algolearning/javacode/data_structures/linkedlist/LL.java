@@ -9,8 +9,12 @@ public class LL {
         list.insertFirst(8);
         list.insertFirst(17);
         list.insertLast(99);
+        list.display();
         list.insert(100, 3);
-        list.insertRecursive(123, 3);
+//        list.insertRecursive(123, 3);
+        list.display();
+        int deleted = list.deleteFirst();
+        System.out.println(deleted);
         list.display();
 //
 //        list.deleteFirst();
